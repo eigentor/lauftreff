@@ -8,3 +8,127 @@ $total-columns  : 12
 $column-width   : 70px           
 $gutter-width   : 10px           
 $grid-padding   : 35px 
+
+// Colors
+
+$body-base-font-color: #333
+$primary-color: #0086C4
+$secondary-color: #0086C4
+$headline-color: #0086C4
+$link-color: darken($secondary-color, 15%)
+$middle-grey: #aaa
+
+// Font Properties
+$font-size-base: 13px
+$font-size-plus-one: 1.1em
+//$font-letter-spacing-base: 0.01em
+$font-size-h1: 2.2em
+$font-size-h2: 1.8em
+$line-height-base: 1.5
+
+$font-family-copy: "OpenSansRegular",verdana, arial, helvetica, sans-serif
+$font-family-headlines: "ArvoRegular","trebuchet ms", arial, helvetica, sans-serif
+
+$font-base-properties: #{$font-size-base}/#{$line-height-base} $font-family-copy 
+
+// Start CSS
+
+/*--------------------------------*/
+/*---------- Reset Styles --------*/
+/*--------------------------------*/
+html, body
+  padding: 0 
+  margin: 0 
+ 
+body
+  line-height: 1
+  //letter-spacing: $font-letter-spacing-base
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+/*--------------------------------*/
+/*------------ Layout ------------*/
+/*--------------------------------*/
+#page 
+  +container
+
+#header 
+  padding-top: 20px
+  margin-bottom: 20px
+
+// Bis wir ein Logo haben
+#logo
+  width: 20%
+  float: left
+
+#name-and-slogan
+  height: 100px
+  width: 20%
+  float: left
+  display: none
+
+#site-name
+  font-family: $font-family-headlines
+  font-size: 2.5em
+  float: left
+  margin: 0 0 0.1em 0
+  text-transform: uppercase
+  font-weight: normal
+  line-height: 1.2
+  border-bottom: 2px solid $primary-color
+  a
+    color: $body-base-font-color
+    font-weight: normal
+    &:hover
+      text-decoration: none
+
+a#logo
+  float: left
+  padding-top: 7px
+
+#navigation
+  float: right
+  width: 70%
+  margin-top: 28px
+  text-align: right
+  ul 
+    li 
+      a 
+        text-transform: uppercase
+        font-family: $font-family-headlines
+        font-size: $font-size-plus-one
+        color: $body-base-font-color
+ 
+#content
+  a.feed-icon
+    display: none
+
+
+/*--------------------------------*/
+/*---- Fonts, Micro-Elements -----*/
+/*--------------------------------*/
+body
+  font: $font-base-properties
+  color: $body-base-font-color
+
+h1,h2,h3,h4,h5,h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, 
+  font-family: $font-family-headlines
+  color: $headline-color
+  text-transform: uppercase
+  font-weight: normal
+
+h1
+  font-size: $font-size-h1
+
+h2 
+  font-size: $font-size-h2
+
+/** Links, Taxonomy etc **/
+a
+  color: $link-color
+  text-decoration: none
+  &:hover, &:active
+    text-decoration: underline 
