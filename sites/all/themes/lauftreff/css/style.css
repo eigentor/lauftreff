@@ -10,6 +10,7 @@ html, body {
 /* line 43, ../sass/style.sass */
 body {
   line-height: 1;
+  letter-spacing: 0.04em;
 }
 
 /* line 47, ../sass/style.sass */
@@ -71,7 +72,7 @@ table {
 }
 /* line 81, ../sass/style.sass */
 #site-name a {
-  color: #333333;
+  color: #444444;
   font-weight: normal;
 }
 /* line 84, ../sass/style.sass */
@@ -97,7 +98,7 @@ a#logo {
   text-transform: uppercase;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 1.1em;
-  color: #333333;
+  color: #444444;
 }
 
 /* line 105, ../sass/style.sass */
@@ -110,8 +111,8 @@ a#logo {
 /*-------------------------------- */
 /* line 112, ../sass/style.sass */
 body {
-  font: 13px/1.5 "OpenSansRegular", verdana, arial, helvetica, sans-serif;
-  color: #333333;
+  font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
+  color: #444444;
 }
 
 /* line 116, ../sass/style.sass */
