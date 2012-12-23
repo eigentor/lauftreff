@@ -5,6 +5,3 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 .sass-cache
-*.sassc
-*.sublime-project
-*.sublime-workspace
