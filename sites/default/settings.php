@@ -215,9 +215,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'lauftreff',
-      'username' => 'root',
-      'password' => '',
+      'database' => 'db11006110-lauft',
+      'username' => 'db11006110-lauftreff',
+      'password' => 'imussrenne-208',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
