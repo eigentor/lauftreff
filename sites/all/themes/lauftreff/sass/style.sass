@@ -1,13 +1,18 @@
 @import "susy"
 @import "compass/css3"
+@import "compass/utilities/general/clearfix"
 
 // IE Compatibility
 $legacy-support-for-ie: true
 
+// Basic paddings and margins
+$page-padding: 35px
+
+// SUSY Grid Definition
 $total-columns  : 12             
 $column-width   : 70px           
 $gutter-width   : 10px           
-$grid-padding   : 35px 
+$grid-padding   : $page-padding 
 
 // Colors
 
@@ -17,10 +22,14 @@ $secondary-color: #0086C4
 $headline-color: #0086C4
 $link-color: darken($secondary-color, 15%)
 $middle-grey: #aaa
+$black: #000
+$footer-text: #888
 
 // Font Properties
 $font-size-base: 13px
 $font-size-plus-one: 1.1em
+$font-size-minus-one: 0.93em
+$font-size-minus-two: 0.83em
 $font-letter-spacing-base: 0.04em
 $font-size-h1: 2.2em
 $font-size-h2: 1.8em
@@ -51,8 +60,20 @@ table
 /*--------------------------------*/
 /*------------ Layout ------------*/
 /*--------------------------------*/
+body 
+  background: #d8d8d8 url(../images/body-bg-aces.png)
+  background: #d8d8d8 url(../images/lgrey008.png)
+  font-family: verdana,arial,helvetica,sans-serif
+  font-size: 12px
+  line-height: 1.5
+  padding: 20px 0 30px
+
 #page 
   +container
+  background: white
+  +box-shadow(0px 2px 6px #999)
+  zoom: 1
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3)
 
 #header 
   padding-top: 20px
@@ -104,6 +125,24 @@ a#logo
 #content
   a.feed-icon
     display: none
+  .section
+    .content
+      padding: 10px 0 25px
+
+#footer
+  +clearfix
+  background: none repeat scroll 0 0 $black
+  color: $footer-text
+  font-size: $font-size-minus-two
+  padding: 9px $page-padding 11px
+  margin: 0 -$page-padding
+  p 
+    margin: 0
+  #footer-left
+    +span-columns(4,12)
+  #footer-right
+    +span-columns(4 omega,12)
+    text-align: right
 
 
 /*--------------------------------*/

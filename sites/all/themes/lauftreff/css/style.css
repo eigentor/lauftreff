@@ -1,19 +1,19 @@
 /*-------------------------------- */
 /*---------- Reset Styles -------- */
 /*-------------------------------- */
-/* line 39, ../sass/style.sass */
+/* line 48, ../sass/style.sass */
 html, body {
   padding: 0;
   margin: 0;
 }
 
-/* line 43, ../sass/style.sass */
+/* line 52, ../sass/style.sass */
 body {
   line-height: 1;
   letter-spacing: 0.04em;
 }
 
-/* line 47, ../sass/style.sass */
+/* line 56, ../sass/style.sass */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -22,7 +22,17 @@ table {
 /*-------------------------------- */
 /*------------ Layout ------------ */
 /*-------------------------------- */
-/* line 54, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
+body {
+  background: #d8d8d8 url(../images/body-bg-aces.png);
+  background: #d8d8d8 url(../images/lgrey008.png);
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 20px 0 30px;
+}
+
+/* line 71, ../sass/style.sass */
 #page {
   *zoom: 1;
   max-width: 950px;
@@ -31,6 +41,12 @@ table {
   padding-right: 35px;
   margin-left: auto;
   margin-right: auto;
+  background: white;
+  -webkit-box-shadow: 0px 2px 6px #999999;
+  -moz-box-shadow: 0px 2px 6px #999999;
+  box-shadow: 0px 2px 6px #999999;
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3);
 }
 /* line 38, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #page:after {
@@ -39,19 +55,19 @@ table {
   clear: both;
 }
 
-/* line 57, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 #header {
   padding-top: 20px;
   margin-bottom: 20px;
 }
 
-/* line 62, ../sass/style.sass */
+/* line 83, ../sass/style.sass */
 #logo {
   width: 20%;
   float: left;
 }
 
-/* line 66, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 #name-and-slogan {
   height: 100px;
   width: 20%;
@@ -59,7 +75,7 @@ table {
   display: none;
 }
 
-/* line 72, ../sass/style.sass */
+/* line 93, ../sass/style.sass */
 #site-name {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 2.5em;
@@ -70,30 +86,30 @@ table {
   line-height: 1.2;
   border-bottom: 2px solid #0086c4;
 }
-/* line 81, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 #site-name a {
   color: #444444;
   font-weight: normal;
 }
-/* line 84, ../sass/style.sass */
+/* line 105, ../sass/style.sass */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 87, ../sass/style.sass */
+/* line 108, ../sass/style.sass */
 a#logo {
   float: left;
   padding-top: 7px;
 }
 
-/* line 91, ../sass/style.sass */
+/* line 112, ../sass/style.sass */
 #navigation {
   float: right;
   width: 70%;
   margin-top: 28px;
   text-align: right;
 }
-/* line 98, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 #navigation ul li a {
   text-transform: uppercase;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -101,21 +117,56 @@ a#logo {
   color: #444444;
 }
 
-/* line 105, ../sass/style.sass */
+/* line 126, ../sass/style.sass */
 #content a.feed-icon {
   display: none;
+}
+/* line 129, ../sass/style.sass */
+#content .section .content {
+  padding: 10px 0 25px;
+}
+
+/* line 132, ../sass/style.sass */
+#footer {
+  overflow: hidden;
+  *zoom: 1;
+  background: none repeat scroll 0 0 black;
+  color: #888888;
+  font-size: 0.83em;
+  padding: 9px 35px 11px;
+  margin: -35px;
+}
+/* line 139, ../sass/style.sass */
+#footer p {
+  margin: 0;
+}
+/* line 141, ../sass/style.sass */
+#footer #footer-left {
+  width: 32.63158%;
+  float: left;
+  margin-right: 1.05263%;
+  display: inline;
+}
+/* line 143, ../sass/style.sass */
+#footer #footer-right {
+  width: 32.63158%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -10px;
+  display: inline;
+  text-align: right;
 }
 
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 112, ../sass/style.sass */
+/* line 151, ../sass/style.sass */
 body {
   font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
   color: #444444;
 }
 
-/* line 116, ../sass/style.sass */
+/* line 155, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -124,23 +175,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: normal;
 }
 
-/* line 123, ../sass/style.sass */
+/* line 162, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 126, ../sass/style.sass */
+/* line 165, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 130, ../sass/style.sass */
+/* line 169, ../sass/style.sass */
 a {
   color: #005278;
   text-decoration: none;
 }
-/* line 133, ../sass/style.sass */
+/* line 172, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
