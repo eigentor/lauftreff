@@ -1,19 +1,19 @@
 /*-------------------------------- */
 /*---------- Reset Styles -------- */
 /*-------------------------------- */
-/* line 48, ../sass/style.sass */
+/* line 51, ../sass/style.sass */
 html, body {
   padding: 0;
   margin: 0;
 }
 
-/* line 52, ../sass/style.sass */
+/* line 55, ../sass/style.sass */
 body {
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: 0em;
 }
 
-/* line 56, ../sass/style.sass */
+/* line 59, ../sass/style.sass */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -22,7 +22,7 @@ table {
 /*-------------------------------- */
 /*------------ Layout ------------ */
 /*-------------------------------- */
-/* line 63, ../sass/style.sass */
+/* line 66, ../sass/style.sass */
 body {
   background: #d8d8d8 url(../images/body-bg-aces.png);
   background: #d8d8d8 url(../images/lgrey008.png);
@@ -32,7 +32,7 @@ body {
   padding: 20px 0 30px;
 }
 
-/* line 71, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 #page {
   *zoom: 1;
   max-width: 950px;
@@ -55,61 +55,97 @@ body {
   clear: both;
 }
 
-/* line 78, ../sass/style.sass */
-#header {
-  padding-top: 20px;
-  margin-bottom: 20px;
+/* line 81, ../sass/style.sass */
+.front #header {
+  height: 225px;
 }
 
-/* line 83, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
+#header-bottom {
+  height: 32px;
+  background: black;
+  margin: 0 -35px;
+  clear: both;
+}
+
+/* line 90, ../sass/style.sass */
+#header-bottom-left {
+  height: 100%;
+  width: 670px;
+  background: #009bdd;
+}
+
+/* line 95, ../sass/style.sass */
+.header-bottom-left-inner {
+  height: 100%;
+  width: 33px;
+  background: #e51b68;
+}
+
+/* line 102, ../sass/style.sass */
 #logo {
-  width: 20%;
-  float: left;
-}
-
-/* line 87, ../sass/style.sass */
-#name-and-slogan {
-  height: 100px;
   width: 20%;
   float: left;
   display: none;
 }
 
-/* line 93, ../sass/style.sass */
+/* line 107, ../sass/style.sass */
+#name-and-slogan {
+  height: 100px;
+  width: 20%;
+  float: left;
+  margin-left: -35px;
+}
+/* line 112, ../sass/style.sass */
+#name-and-slogan #site-name {
+  padding: 10px 10px 15px 35px;
+  font-size: 50px;
+  background: black;
+}
+/* line 116, ../sass/style.sass */
+#name-and-slogan #site-name a {
+  color: white;
+}
+
+/* line 118, ../sass/style.sass */
+.front #name-and-slogan {
+  height: 220px;
+}
+
+/* line 121, ../sass/style.sass */
 #site-name {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 2.5em;
   float: left;
   margin: 0 0 0.1em 0;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: normal;
   line-height: 1.2;
-  border-bottom: 2px solid #0086c4;
 }
-/* line 102, ../sass/style.sass */
+/* line 129, ../sass/style.sass */
 #site-name a {
   color: #444444;
   font-weight: normal;
 }
-/* line 105, ../sass/style.sass */
+/* line 132, ../sass/style.sass */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 108, ../sass/style.sass */
+/* line 135, ../sass/style.sass */
 a#logo {
   float: left;
   padding-top: 7px;
 }
 
-/* line 112, ../sass/style.sass */
+/* line 139, ../sass/style.sass */
 #navigation {
   float: right;
   width: 70%;
   margin-top: 28px;
   text-align: right;
 }
-/* line 119, ../sass/style.sass */
+/* line 146, ../sass/style.sass */
 #navigation ul li a {
   text-transform: uppercase;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -117,16 +153,21 @@ a#logo {
   color: #444444;
 }
 
-/* line 126, ../sass/style.sass */
+/* line 152, ../sass/style.sass */
+#content {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 154, ../sass/style.sass */
 #content a.feed-icon {
   display: none;
 }
-/* line 129, ../sass/style.sass */
+/* line 157, ../sass/style.sass */
 #content .section .content {
   padding: 10px 0 25px;
 }
 
-/* line 132, ../sass/style.sass */
+/* line 160, ../sass/style.sass */
 #footer {
   overflow: hidden;
   *zoom: 1;
@@ -134,20 +175,20 @@ a#logo {
   color: #888888;
   font-size: 0.83em;
   padding: 9px 35px 11px;
-  margin: -35px;
+  margin: 0 -35px;
 }
-/* line 139, ../sass/style.sass */
+/* line 167, ../sass/style.sass */
 #footer p {
   margin: 0;
 }
-/* line 141, ../sass/style.sass */
+/* line 169, ../sass/style.sass */
 #footer #footer-left {
   width: 32.63158%;
   float: left;
   margin-right: 1.05263%;
   display: inline;
 }
-/* line 143, ../sass/style.sass */
+/* line 171, ../sass/style.sass */
 #footer #footer-right {
   width: 32.63158%;
   float: right;
@@ -160,38 +201,39 @@ a#logo {
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 151, ../sass/style.sass */
+/* line 179, ../sass/style.sass */
 body {
   font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
   color: #444444;
 }
 
-/* line 155, ../sass/style.sass */
+/* line 183, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   color: #0086c4;
   text-transform: uppercase;
   font-weight: normal;
+  letter-spacing: 0.04em;
 }
 
-/* line 162, ../sass/style.sass */
+/* line 191, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 165, ../sass/style.sass */
+/* line 194, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 169, ../sass/style.sass */
+/* line 198, ../sass/style.sass */
 a {
   color: #005278;
   text-decoration: none;
 }
-/* line 172, ../sass/style.sass */
+/* line 201, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }

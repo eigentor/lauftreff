@@ -112,6 +112,13 @@
 
       </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
+    <div id="header-bottom">
+            <div id="header-bottom-left">
+              <div class="header-bottom-left-inner">
+                
+              </div>
+            </div>
+          </div>
 
     </div></div> <!-- /.section, /#header -->
 

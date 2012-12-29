@@ -19,18 +19,21 @@ $grid-padding   : $page-padding
 $body-base-font-color: #444
 $primary-color: #0086C4
 $secondary-color: #0086C4
+$secondary-color-areas: #009BDD
 $headline-color: #0086C4
 $link-color: darken($secondary-color, 15%)
 $middle-grey: #aaa
 $black: #000
 $footer-text: #888
+$pink: #E51B68
 
 // Font Properties
 $font-size-base: 13px
 $font-size-plus-one: 1.1em
 $font-size-minus-one: 0.93em
 $font-size-minus-two: 0.83em
-$font-letter-spacing-base: 0.04em
+$font-letter-spacing-base: 0.00em
+$font-letter-spacing-headlines: 0.04em
 $font-size-h1: 2.2em
 $font-size-h2: 1.8em
 $line-height-base: 1.5
@@ -75,30 +78,54 @@ body
   zoom: 1
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3)
 
-#header 
-  padding-top: 20px
-  margin-bottom: 20px
+.front #header
+  height: 225px
+
+#header-bottom 
+  height: 32px
+  background: black
+  margin: 0 (-$page-padding)
+  clear: both
+
+#header-bottom-left 
+  height: 100%
+  width: 670px
+  background: $secondary-color-areas
+
+.header-bottom-left-inner 
+  height: 100%
+  width: 33px
+  background: $pink
+
 
 // Bis wir ein Logo haben
 #logo
   width: 20%
   float: left
+  display: none
 
 #name-and-slogan
   height: 100px
   width: 20%
   float: left
-  display: none
+  margin-left: (-$page-padding)
+  #site-name
+    padding: 10px 10px 15px $page-padding
+    font-size: 50px
+    background: black
+    a
+      color: white
+.front #name-and-slogan
+  height: 220px
 
 #site-name
   font-family: $font-family-headlines
   font-size: 2.5em
   float: left
   margin: 0 0 0.1em 0
-  text-transform: uppercase
+  text-transform: lowercase
   font-weight: normal
   line-height: 1.2
-  border-bottom: 2px solid $primary-color
   a
     color: $body-base-font-color
     font-weight: normal
@@ -123,6 +150,7 @@ a#logo
         color: $body-base-font-color
  
 #content
+  +clearfix
   a.feed-icon
     display: none
   .section
@@ -135,7 +163,7 @@ a#logo
   color: $footer-text
   font-size: $font-size-minus-two
   padding: 9px $page-padding 11px
-  margin: 0 -$page-padding
+  margin: 0 (-$page-padding) 
   p 
     margin: 0
   #footer-left
@@ -158,6 +186,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
   color: $headline-color
   text-transform: uppercase
   font-weight: normal
+  letter-spacing: $font-letter-spacing-headlines
 
 h1
   font-size: $font-size-h1
