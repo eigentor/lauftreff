@@ -111,26 +111,27 @@ body
   margin-left: (-$page-padding)
   #site-name
     padding: 10px 10px 15px $page-padding
-    font-size: 50px
     background: black
+    font-family: $font-family-headlines
+    font-size: 50px
+    float: left
+    margin: 0 0 0.1em 0
+    text-transform: lowercase
+    font-weight: normal
+    line-height: 1.2
+    width: 277px
     a
+      color: $body-base-font-color
+      font-weight: normal
       color: white
+      &:hover
+        text-decoration: none
+      
 .front #name-and-slogan
   height: 220px
 
 #site-name
-  font-family: $font-family-headlines
-  font-size: 2.5em
-  float: left
-  margin: 0 0 0.1em 0
-  text-transform: lowercase
-  font-weight: normal
-  line-height: 1.2
-  a
-    color: $body-base-font-color
-    font-weight: normal
-    &:hover
-      text-decoration: none
+  
 
 a#logo
   float: left

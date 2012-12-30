@@ -99,53 +99,46 @@ body {
 /* line 112, ../sass/style.sass */
 #name-and-slogan #site-name {
   padding: 10px 10px 15px 35px;
-  font-size: 50px;
   background: black;
-}
-/* line 116, ../sass/style.sass */
-#name-and-slogan #site-name a {
-  color: white;
-}
-
-/* line 118, ../sass/style.sass */
-.front #name-and-slogan {
-  height: 220px;
-}
-
-/* line 121, ../sass/style.sass */
-#site-name {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
-  font-size: 2.5em;
+  font-size: 50px;
   float: left;
   margin: 0 0 0.1em 0;
   text-transform: lowercase;
   font-weight: normal;
   line-height: 1.2;
+  width: 277px;
 }
-/* line 129, ../sass/style.sass */
-#site-name a {
+/* line 123, ../sass/style.sass */
+#name-and-slogan #site-name a {
   color: #444444;
   font-weight: normal;
+  color: white;
 }
-/* line 132, ../sass/style.sass */
-#site-name a:hover {
+/* line 127, ../sass/style.sass */
+#name-and-slogan #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 135, ../sass/style.sass */
+/* line 130, ../sass/style.sass */
+.front #name-and-slogan {
+  height: 220px;
+}
+
+/* line 136, ../sass/style.sass */
 a#logo {
   float: left;
   padding-top: 7px;
 }
 
-/* line 139, ../sass/style.sass */
+/* line 140, ../sass/style.sass */
 #navigation {
   float: right;
   width: 70%;
   margin-top: 28px;
   text-align: right;
 }
-/* line 146, ../sass/style.sass */
+/* line 147, ../sass/style.sass */
 #navigation ul li a {
   text-transform: uppercase;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -153,21 +146,21 @@ a#logo {
   color: #444444;
 }
 
-/* line 152, ../sass/style.sass */
+/* line 153, ../sass/style.sass */
 #content {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 154, ../sass/style.sass */
+/* line 155, ../sass/style.sass */
 #content a.feed-icon {
   display: none;
 }
-/* line 157, ../sass/style.sass */
+/* line 158, ../sass/style.sass */
 #content .section .content {
   padding: 10px 0 25px;
 }
 
-/* line 160, ../sass/style.sass */
+/* line 161, ../sass/style.sass */
 #footer {
   overflow: hidden;
   *zoom: 1;
@@ -177,18 +170,18 @@ a#logo {
   padding: 9px 35px 11px;
   margin: 0 -35px;
 }
-/* line 167, ../sass/style.sass */
+/* line 168, ../sass/style.sass */
 #footer p {
   margin: 0;
 }
-/* line 169, ../sass/style.sass */
+/* line 170, ../sass/style.sass */
 #footer #footer-left {
   width: 32.63158%;
   float: left;
   margin-right: 1.05263%;
   display: inline;
 }
-/* line 171, ../sass/style.sass */
+/* line 172, ../sass/style.sass */
 #footer #footer-right {
   width: 32.63158%;
   float: right;
@@ -201,13 +194,13 @@ a#logo {
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 179, ../sass/style.sass */
+/* line 180, ../sass/style.sass */
 body {
   font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
   color: #444444;
 }
 
-/* line 183, ../sass/style.sass */
+/* line 184, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -217,23 +210,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   letter-spacing: 0.04em;
 }
 
-/* line 191, ../sass/style.sass */
+/* line 192, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 194, ../sass/style.sass */
+/* line 195, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 198, ../sass/style.sass */
+/* line 199, ../sass/style.sass */
 a {
   color: #005278;
   text-decoration: none;
 }
-/* line 201, ../sass/style.sass */
+/* line 202, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
