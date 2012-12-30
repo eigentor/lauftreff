@@ -102,6 +102,8 @@
           <?php endif; ?>
         </div> <!-- /#name-and-slogan -->
       <?php endif; ?>
+      <div id="header-image">
+      </div>
 
       <?php print render($page['header']); ?>
 

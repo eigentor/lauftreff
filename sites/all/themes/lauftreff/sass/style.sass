@@ -78,7 +78,13 @@ body
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3)
 
 .front #header
-  height: 225px
+  height: 328px
+  margin-right: (-$page-padding)
+  #header-image 
+    background: url(../images/header-laeufer.jpg) no-repeat right bottom
+    height: 296px
+    width: 705px
+    float: right
 
 #header-bottom 
   height: 32px
@@ -173,7 +179,7 @@ a#logo
 /*--------------------------------*/
 
 .sidebar-second #page
-  +at-breakpoint(750px 12 lt-ie9)
+  //+at-breakpoint(750px 12 lt-ie9)
     #content
       +span-columns(9,12)
       .section
