@@ -15,13 +15,12 @@ $gutter-width   : 10px
 $grid-padding   : $page-padding 
 
 // Colors
-
 $body-base-font-color: #444
 $primary-color: #0086C4
 $secondary-color: #0086C4
 $secondary-color-areas: #009BDD
 $headline-color: #0086C4
-$link-color: darken($secondary-color, 15%)
+$link-color: $secondary-color
 $middle-grey: #aaa
 $black: #000
 $footer-text: #888
@@ -128,10 +127,7 @@ body
         text-decoration: none
       
 .front #name-and-slogan
-  height: 220px
-
-#site-name
-  
+  height: 220px  
 
 a#logo
   float: left
@@ -154,9 +150,8 @@ a#logo
   +clearfix
   a.feed-icon
     display: none
-  .section
-    .content
-      padding: 10px 0 25px
+  .region-content
+    padding: 10px 0 25px
 
 #footer
   +clearfix
@@ -172,6 +167,19 @@ a#logo
   #footer-right
     +span-columns(4 omega,12)
     text-align: right
+
+/*--------------------------------*/
+/*-------- Desktop-Layout --------*/
+/*--------------------------------*/
+
+.sidebar-second #page
+  +at-breakpoint(750px 12 lt-ie9)
+    #content
+      +span-columns(9,12)
+      .section
+        padding-right: 30px
+    #sidebar-second
+      +span-columns(3 omega,12)
 
 
 /*--------------------------------*/
@@ -201,3 +209,36 @@ a
   text-decoration: none
   &:hover, &:active
     text-decoration: underline 
+
+/*--------------------------------*/
+/*---------- Comments ------------*/
+/*--------------------------------*/
+
+#comments
+  .comment
+    +clearfix
+    border: 1px solid #ddd 
+    background: #FCFBF7
+    padding: 15px 25px 15px 17px
+    .user-picture-wrapper
+      float: left
+      width: 14%
+      padding-top: 5px
+      img 
+        border: 1px solid #ddd
+      .comment-author
+        font-size: $font-size-minus-two
+    .comment-content
+      float: left
+      width: 86%
+      h3.title
+        margin: 0 0 2px
+      .links 
+        width: 75%
+        float: right
+        ul.links
+          float: left
+          margin: 0
+          width: 55%
+        .comment-date
+          float: right
