@@ -86,18 +86,54 @@ body
     width: 705px
     float: right
 
+#header 
+  margin: 0
+  ul#main-menu
+    float: left
+    margin: 0
+    width: 580px
+    li 
+      float: left
+      padding: 0
+      &.first
+        a 
+          padding-left: 10px
+      a
+        color: #EDF6F9
+        text-transform: uppercase 
+        line-height: 29px
+        font-size: 1.3em
+        display: inline-block
+        padding: 3px 10px 0
+      &.active
+        a
+          background: black
+          color: white
+          border-bottom: 3px solid #E51B68
+          //border-bottom: 4px solid $headline-color
+          //margin-top: 2px
+
+
 #header-bottom 
   height: 32px
   background: black
   margin: 0 (-$page-padding)
+  border-top: 5px solid white
   clear: both
+
+.front #header-bottom
+  margin: 0 0 0 (-$page-padding)
+  border: 0
+  
 
 #header-bottom-left 
   height: 100%
   width: 670px
   background: $secondary-color-areas
+  float: left
 
 .header-bottom-left-inner 
+  float: left
   height: 100%
   width: 33px
   background: $pink
@@ -110,47 +146,59 @@ body
   display: none
 
 #name-and-slogan
-  height: 100px
-  width: 20%
+  height: 108px
   float: left
   margin-left: (-$page-padding)
   #site-name
     padding: 10px 10px 15px $page-padding
     background: black
     font-family: $font-family-headlines
-    font-size: 50px
+    font-size: 35px
     float: left
     margin: 0 0 0.1em 0
     text-transform: lowercase
     font-weight: normal
     line-height: 1.2
-    width: 277px
+    width: 230px
     a
       color: $body-base-font-color
       font-weight: normal
       color: white
       &:hover
         text-decoration: none
+  #site-slogan
+    float: left
+    font-family: $font-family-headlines
       
 .front #name-and-slogan
-  height: 220px  
+  width: 20%
+  height: 220px 
+  #site-name
+    padding: 10px 10px 15px $page-padding
+    font-size: 50px
+    float: left
+    margin: 0 0 0.1em 0
+    text-transform: lowercase
+    font-weight: normal
+    line-height: 1.2
+    width: 277px 
+  #site-slogan
+    padding-left: $page-padding
+    width: 250px
+    clear: left
+    font-size: 23px
+    line-height: 1.2
+    padding-bottom: 13px
+    padding-top: 14px
+  #header-info
+    clear: left
+    padding-left: $page-padding
+    width: 250px
+    color: #888
 
 a#logo
   float: left
   padding-top: 7px
-
-#navigation
-  float: right
-  width: 70%
-  margin-top: 28px
-  text-align: right
-  ul 
-    li 
-      a 
-        text-transform: uppercase
-        font-family: $font-family-headlines
-        font-size: $font-size-plus-one
-        color: $body-base-font-color
  
 #content
   +clearfix

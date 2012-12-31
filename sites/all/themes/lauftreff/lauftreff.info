@@ -6,3 +6,17 @@ core = 7.x
 stylesheets[all][] = font_face/asap/stylesheet-asap.css
 stylesheets[all][] = font_face/arvo/stylesheet-arvo.css
 stylesheets[all][] = css/style.css
+
+regions[header] = Header
+regions[header_info] = Header Info
+regions[help] = Help
+regions[page_top] = Page Top
+regions[page_bottom] = Page Bottom
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer
+
+
+
