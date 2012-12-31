@@ -29,6 +29,7 @@ $pink: #E51B68
 // Font Properties
 $font-size-base: 13px
 $font-size-plus-one: 1.1em
+$font-size-plus-two: 1.2em
 $font-size-minus-one: 0.93em
 $font-size-minus-two: 0.83em
 $font-letter-spacing-base: 0.00em
@@ -265,6 +266,19 @@ a
     text-decoration: underline 
 
 /*--------------------------------*/
+/* Drupal-specific Micro-Elements */
+/*--------------------------------*/
+
+ul.action-links
+  padding-left: 3px
+  li
+    list-style: none
+    list-image: none
+    padding-left: 17px
+    background: url(../images/add.png) no-repeat 0 center
+    font-size: $font-size-plus-one
+
+/*--------------------------------*/
 /*---------- Comments ------------*/
 /*--------------------------------*/
 
@@ -296,3 +310,9 @@ a
           width: 55%
         .comment-date
           float: right
+
+/*--------------------------------*/
+/*------- Wysiwyg Formate -------*/
+/*--------------------------------*/
+body.cke_show_borders
+  background: white
