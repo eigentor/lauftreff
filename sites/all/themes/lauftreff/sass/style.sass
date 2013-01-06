@@ -228,13 +228,12 @@ a#logo
 /*--------------------------------*/
 
 .sidebar-second #page
-  //+at-breakpoint(750px 12 lt-ie9)
-    #content
-      +span-columns(9,12)
-      .section
-        padding-right: 30px
-    #sidebar-second
-      +span-columns(3 omega,12)
+  #content
+    +span-columns(9,12)
+    .section
+      padding-right: 30px
+  #sidebar-second
+    +span-columns(3 omega,12)
 
 
 /*--------------------------------*/
@@ -277,6 +276,9 @@ ul.action-links
     padding-left: 17px
     background: url(../images/add.png) no-repeat 0 center
     font-size: $font-size-plus-one
+
+div.messages, div.status 
+  margin-top: 30px
 
 /*--------------------------------*/
 /*---------- Comments ------------*/

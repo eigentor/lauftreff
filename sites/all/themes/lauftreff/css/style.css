@@ -264,16 +264,36 @@ a#logo {
 /*-------------------------------- */
 /*-------- Desktop-Layout -------- */
 /*-------------------------------- */
+/* line 231, ../sass/style.sass */
+.sidebar-second #page #content {
+  width: 74.73684%;
+  float: left;
+  margin-right: 1.05263%;
+  display: inline;
+}
+/* line 233, ../sass/style.sass */
+.sidebar-second #page #content .section {
+  padding-right: 30px;
+}
+/* line 235, ../sass/style.sass */
+.sidebar-second #page #sidebar-second {
+  width: 24.21053%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -10px;
+  display: inline;
+}
+
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 243, ../sass/style.sass */
+/* line 242, ../sass/style.sass */
 body {
   font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
   color: #444444;
 }
 
-/* line 247, ../sass/style.sass */
+/* line 246, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -283,23 +303,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   letter-spacing: 0.04em;
 }
 
-/* line 255, ../sass/style.sass */
+/* line 254, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 258, ../sass/style.sass */
+/* line 257, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 262, ../sass/style.sass */
+/* line 261, ../sass/style.sass */
 a {
   color: #0086c4;
   text-decoration: none;
 }
-/* line 265, ../sass/style.sass */
+/* line 264, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
@@ -307,11 +327,11 @@ a:hover, a:active {
 /*-------------------------------- */
 /* Drupal-specific Micro-Elements */
 /*-------------------------------- */
-/* line 272, ../sass/style.sass */
+/* line 271, ../sass/style.sass */
 ul.action-links {
   padding-left: 3px;
 }
-/* line 274, ../sass/style.sass */
+/* line 273, ../sass/style.sass */
 ul.action-links li {
   list-style: none;
   list-image: none;
@@ -320,10 +340,15 @@ ul.action-links li {
   font-size: 1.1em;
 }
 
+/* line 280, ../sass/style.sass */
+div.messages, div.status {
+  margin-top: 30px;
+}
+
 /*-------------------------------- */
 /*---------- Comments ------------ */
 /*-------------------------------- */
-/* line 286, ../sass/style.sass */
+/* line 288, ../sass/style.sass */
 #comments .comment {
   overflow: hidden;
   *zoom: 1;
@@ -331,41 +356,41 @@ ul.action-links li {
   background: #fcfbf7;
   padding: 15px 25px 15px 17px;
 }
-/* line 291, ../sass/style.sass */
+/* line 293, ../sass/style.sass */
 #comments .comment .user-picture-wrapper {
   float: left;
   width: 14%;
   padding-top: 5px;
 }
-/* line 295, ../sass/style.sass */
+/* line 297, ../sass/style.sass */
 #comments .comment .user-picture-wrapper img {
   border: 1px solid #dddddd;
 }
-/* line 297, ../sass/style.sass */
+/* line 299, ../sass/style.sass */
 #comments .comment .user-picture-wrapper .comment-author {
   font-size: 0.83em;
 }
-/* line 299, ../sass/style.sass */
+/* line 301, ../sass/style.sass */
 #comments .comment .comment-content {
   float: left;
   width: 86%;
 }
-/* line 302, ../sass/style.sass */
+/* line 304, ../sass/style.sass */
 #comments .comment .comment-content h3.title {
   margin: 0 0 2px;
 }
-/* line 304, ../sass/style.sass */
+/* line 306, ../sass/style.sass */
 #comments .comment .comment-content .links {
   width: 75%;
   float: right;
 }
-/* line 307, ../sass/style.sass */
+/* line 309, ../sass/style.sass */
 #comments .comment .comment-content .links ul.links {
   float: left;
   margin: 0;
   width: 55%;
 }
-/* line 311, ../sass/style.sass */
+/* line 313, ../sass/style.sass */
 #comments .comment .comment-content .links .comment-date {
   float: right;
 }
@@ -373,7 +398,7 @@ ul.action-links li {
 /*-------------------------------- */
 /*------- Wysiwyg Formate ------- */
 /*-------------------------------- */
-/* line 317, ../sass/style.sass */
+/* line 319, ../sass/style.sass */
 body.cke_show_borders {
   background: white;
 }
