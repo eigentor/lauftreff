@@ -220,17 +220,18 @@ a#logo {
 #content {
   overflow: hidden;
   *zoom: 1;
+  padding-top: 20px;
 }
-/* line 206, ../sass/style.sass */
+/* line 207, ../sass/style.sass */
 #content a.feed-icon {
   display: none;
 }
-/* line 208, ../sass/style.sass */
+/* line 209, ../sass/style.sass */
 #content .region-content {
   padding: 10px 0 25px;
 }
 
-/* line 211, ../sass/style.sass */
+/* line 212, ../sass/style.sass */
 #footer {
   overflow: hidden;
   *zoom: 1;
@@ -240,18 +241,18 @@ a#logo {
   padding: 9px 35px 11px;
   margin: 0 -35px;
 }
-/* line 218, ../sass/style.sass */
+/* line 219, ../sass/style.sass */
 #footer p {
   margin: 0;
 }
-/* line 220, ../sass/style.sass */
+/* line 221, ../sass/style.sass */
 #footer #footer-left {
   width: 32.63158%;
   float: left;
   margin-right: 1.05263%;
   display: inline;
 }
-/* line 222, ../sass/style.sass */
+/* line 223, ../sass/style.sass */
 #footer #footer-right {
   width: 32.63158%;
   float: right;
@@ -264,18 +265,18 @@ a#logo {
 /*-------------------------------- */
 /*-------- Desktop-Layout -------- */
 /*-------------------------------- */
-/* line 231, ../sass/style.sass */
+/* line 232, ../sass/style.sass */
 .sidebar-second #page #content {
   width: 74.73684%;
   float: left;
   margin-right: 1.05263%;
   display: inline;
 }
-/* line 233, ../sass/style.sass */
+/* line 234, ../sass/style.sass */
 .sidebar-second #page #content .section {
   padding-right: 30px;
 }
-/* line 235, ../sass/style.sass */
+/* line 236, ../sass/style.sass */
 .sidebar-second #page #sidebar-second {
   width: 24.21053%;
   float: right;
@@ -287,13 +288,13 @@ a#logo {
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 242, ../sass/style.sass */
+/* line 243, ../sass/style.sass */
 body {
   font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
   color: #444444;
 }
 
-/* line 246, ../sass/style.sass */
+/* line 247, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -303,23 +304,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   letter-spacing: 0.04em;
 }
 
-/* line 254, ../sass/style.sass */
+/* line 255, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 257, ../sass/style.sass */
+/* line 258, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 261, ../sass/style.sass */
+/* line 262, ../sass/style.sass */
 a {
   color: #0086c4;
   text-decoration: none;
 }
-/* line 264, ../sass/style.sass */
+/* line 265, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
@@ -327,11 +328,11 @@ a:hover, a:active {
 /*-------------------------------- */
 /* Drupal-specific Micro-Elements */
 /*-------------------------------- */
-/* line 271, ../sass/style.sass */
+/* line 272, ../sass/style.sass */
 ul.action-links {
   padding-left: 3px;
 }
-/* line 273, ../sass/style.sass */
+/* line 274, ../sass/style.sass */
 ul.action-links li {
   list-style: none;
   list-image: none;
@@ -340,7 +341,7 @@ ul.action-links li {
   font-size: 1.1em;
 }
 
-/* line 280, ../sass/style.sass */
+/* line 281, ../sass/style.sass */
 div.messages, div.status {
   margin-top: 30px;
 }
@@ -348,7 +349,7 @@ div.messages, div.status {
 /*-------------------------------- */
 /*---------- Comments ------------ */
 /*-------------------------------- */
-/* line 288, ../sass/style.sass */
+/* line 289, ../sass/style.sass */
 #comments .comment {
   overflow: hidden;
   *zoom: 1;
@@ -356,49 +357,55 @@ div.messages, div.status {
   background: #fcfbf7;
   padding: 15px 25px 15px 17px;
 }
-/* line 293, ../sass/style.sass */
+/* line 294, ../sass/style.sass */
 #comments .comment .user-picture-wrapper {
   float: left;
   width: 14%;
   padding-top: 5px;
 }
-/* line 297, ../sass/style.sass */
+/* line 298, ../sass/style.sass */
 #comments .comment .user-picture-wrapper img {
-  border: 1px solid #dddddd;
+  border: 1px solid #d5d5d5;
 }
-/* line 299, ../sass/style.sass */
+/* line 300, ../sass/style.sass */
 #comments .comment .user-picture-wrapper .comment-author {
   font-size: 0.83em;
 }
-/* line 301, ../sass/style.sass */
+/* line 302, ../sass/style.sass */
 #comments .comment .comment-content {
   float: left;
   width: 86%;
 }
-/* line 304, ../sass/style.sass */
+/* line 305, ../sass/style.sass */
 #comments .comment .comment-content h3.title {
   margin: 0 0 2px;
 }
-/* line 306, ../sass/style.sass */
-#comments .comment .comment-content .links {
-  width: 75%;
-  float: right;
+/* line 307, ../sass/style.sass */
+#comments .comment .comment-content .content {
+  margin-bottom: 15px;
 }
-/* line 309, ../sass/style.sass */
+/* line 310, ../sass/style.sass */
 #comments .comment .comment-content .links ul.links {
   float: left;
   margin: 0;
-  width: 55%;
+  font-size: 0.93em;
 }
-/* line 313, ../sass/style.sass */
+/* line 314, ../sass/style.sass */
+#comments .comment .comment-content .links ul.links li {
+  padding: 0 10px 0 0;
+}
+/* line 316, ../sass/style.sass */
 #comments .comment .comment-content .links .comment-date {
+  float: right;
+  font-size: 0.83em;
+  color: #888888;
   float: right;
 }
 
 /*-------------------------------- */
 /*------- Wysiwyg Formate ------- */
 /*-------------------------------- */
-/* line 319, ../sass/style.sass */
+/* line 325, ../sass/style.sass */
 body.cke_show_borders {
   background: white;
 }

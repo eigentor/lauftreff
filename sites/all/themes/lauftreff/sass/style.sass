@@ -203,6 +203,7 @@ a#logo
  
 #content
   +clearfix
+  padding-top: 20px
   a.feed-icon
     display: none
   .region-content
@@ -295,7 +296,7 @@ div.messages, div.status
       width: 14%
       padding-top: 5px
       img 
-        border: 1px solid #ddd
+        border: 1px solid #d5d5d5
       .comment-author
         font-size: $font-size-minus-two
     .comment-content
@@ -303,14 +304,19 @@ div.messages, div.status
       width: 86%
       h3.title
         margin: 0 0 2px
+      .content
+        margin-bottom: 15px
       .links 
-        width: 75%
-        float: right
         ul.links
           float: left
           margin: 0
-          width: 55%
+          font-size: $font-size-minus-one
+          li
+            padding: 0 10px 0 0
         .comment-date
+          float: right
+          font-size: $font-size-minus-two
+          color: #888
           float: right
 
 /*--------------------------------*/
