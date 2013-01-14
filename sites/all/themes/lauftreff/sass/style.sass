@@ -251,13 +251,13 @@ h1,h2,h3,h4,h5,h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, 
   font-family: $font-family-headlines
   color: $headline-color
-  text-transform: uppercase
-  font-weight: normal
-  letter-spacing: $font-letter-spacing-headlines
+  font-weight: normal  
   margin: 7px 0 10px
 
 h1
   font-size: $font-size-h1
+  text-transform: uppercase
+  letter-spacing: $font-letter-spacing-headlines 
 
 h2 
   font-size: $font-size-h2
@@ -265,6 +265,11 @@ h2
 .sidebar h2 
   text-transform: none
   line-height: 1.2
+
+.comment h3.title,
+.sidebar .view-blog h3 
+  text-transform: uppercase
+  letter-spacing: $font-letter-spacing-headlines
 
 /** Links, Taxonomy etc **/
 a
@@ -306,6 +311,7 @@ div.messages, div.status
     border: 1px solid #ddd 
     background: #FCFBF7
     padding: 15px 25px 15px 17px
+    margin-bottom: 20px
     .user-picture-wrapper
       float: left
       width: 14%
@@ -333,13 +339,18 @@ div.messages, div.status
           font-size: $font-size-minus-two
           color: $submitted-color
           float: right
+  h2.comment-form
+    margin-top: 25px
+
 ul.inline
   li.comment-add 
     padding: 15px 0 0 0
     a 
-      background: url(../images/comment-icon.png) no-repeat 0 center
+      background: url(../images/comment-icon.png) no-repeat 0 2px
       padding-left: 25px
       color: $link-color
+      display: inline-block
+      line-height: 20px
 
 /*--------------------------------*/
 /*------------- Blog ------------*/

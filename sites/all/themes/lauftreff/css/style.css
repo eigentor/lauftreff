@@ -303,15 +303,15 @@ h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   color: #0086c4;
-  text-transform: uppercase;
   font-weight: normal;
-  letter-spacing: 0.04em;
   margin: 7px 0 10px;
 }
 
-/* line 259, ../sass/style.sass */
+/* line 257, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* line 262, ../sass/style.sass */
@@ -325,18 +325,25 @@ h2 {
   line-height: 1.2;
 }
 
+/* line 269, ../sass/style.sass */
+.comment h3.title,
+.sidebar .view-blog h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 /*Links, Taxonomy etc */
-/* line 270, ../sass/style.sass */
+/* line 275, ../sass/style.sass */
 a {
   color: #0086c4;
   text-decoration: none;
 }
-/* line 273, ../sass/style.sass */
+/* line 278, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
 
-/* line 276, ../sass/style.sass */
+/* line 281, ../sass/style.sass */
 p {
   margin: 10px 0 11px;
 }
@@ -344,11 +351,11 @@ p {
 /*-------------------------------- */
 /* Drupal-specific Micro-Elements */
 /*-------------------------------- */
-/* line 283, ../sass/style.sass */
+/* line 288, ../sass/style.sass */
 ul.action-links {
   padding-left: 3px;
 }
-/* line 285, ../sass/style.sass */
+/* line 290, ../sass/style.sass */
 ul.action-links li {
   list-style: none;
   list-image: none;
@@ -357,12 +364,12 @@ ul.action-links li {
   font-size: 1.1em;
 }
 
-/* line 292, ../sass/style.sass */
+/* line 297, ../sass/style.sass */
 div.messages, div.status {
   margin-top: 30px;
 }
 
-/* line 295, ../sass/style.sass */
+/* line 300, ../sass/style.sass */
 .submitted {
   font-size: 0.83em;
   color: #888888;
@@ -371,74 +378,81 @@ div.messages, div.status {
 /*-------------------------------- */
 /*---------- Comments ------------ */
 /*-------------------------------- */
-/* line 304, ../sass/style.sass */
+/* line 309, ../sass/style.sass */
 #comments .comment {
   overflow: hidden;
   *zoom: 1;
   border: 1px solid #dddddd;
   background: #fcfbf7;
   padding: 15px 25px 15px 17px;
+  margin-bottom: 20px;
 }
-/* line 309, ../sass/style.sass */
+/* line 315, ../sass/style.sass */
 #comments .comment .user-picture-wrapper {
   float: left;
   width: 14%;
   padding-top: 5px;
 }
-/* line 313, ../sass/style.sass */
+/* line 319, ../sass/style.sass */
 #comments .comment .user-picture-wrapper img {
   border: 1px solid #d5d5d5;
 }
-/* line 315, ../sass/style.sass */
+/* line 321, ../sass/style.sass */
 #comments .comment .user-picture-wrapper .comment-author {
   font-size: 0.83em;
 }
-/* line 317, ../sass/style.sass */
+/* line 323, ../sass/style.sass */
 #comments .comment .comment-content {
   float: left;
   width: 86%;
 }
-/* line 320, ../sass/style.sass */
+/* line 326, ../sass/style.sass */
 #comments .comment .comment-content h3.title {
   margin: 0 0 2px;
 }
-/* line 322, ../sass/style.sass */
+/* line 328, ../sass/style.sass */
 #comments .comment .comment-content .content {
   margin-bottom: 15px;
 }
-/* line 325, ../sass/style.sass */
+/* line 331, ../sass/style.sass */
 #comments .comment .comment-content .links ul.links {
   float: left;
   margin: 0;
   font-size: 0.93em;
 }
-/* line 329, ../sass/style.sass */
+/* line 335, ../sass/style.sass */
 #comments .comment .comment-content .links ul.links li {
   padding: 0 10px 0 0;
 }
-/* line 331, ../sass/style.sass */
+/* line 337, ../sass/style.sass */
 #comments .comment .comment-content .links .comment-date {
   float: right;
   font-size: 0.83em;
   color: #888888;
   float: right;
 }
+/* line 342, ../sass/style.sass */
+#comments h2.comment-form {
+  margin-top: 25px;
+}
 
-/* line 337, ../sass/style.sass */
+/* line 346, ../sass/style.sass */
 ul.inline li.comment-add {
   padding: 15px 0 0 0;
 }
-/* line 339, ../sass/style.sass */
+/* line 348, ../sass/style.sass */
 ul.inline li.comment-add a {
-  background: url(../images/comment-icon.png) no-repeat 0 center;
+  background: url(../images/comment-icon.png) no-repeat 0 2px;
   padding-left: 25px;
   color: #0086c4;
+  display: inline-block;
+  line-height: 20px;
 }
 
 /*-------------------------------- */
 /*------------- Blog ------------ */
 /*-------------------------------- */
-/* line 349, ../sass/style.sass */
+/* line 360, ../sass/style.sass */
 .node .field-name-field-tags {
   margin-bottom: 15px;
 }
@@ -446,7 +460,7 @@ ul.inline li.comment-add a {
 /*-------------------------------- */
 /*------- Wysiwyg Formate ------- */
 /*-------------------------------- */
-/* line 357, ../sass/style.sass */
+/* line 368, ../sass/style.sass */
 body.cke_show_borders {
   background: white;
 }
