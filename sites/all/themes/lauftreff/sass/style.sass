@@ -25,6 +25,7 @@ $middle-grey: #aaa
 $black: #000
 $footer-text: #888
 $pink: #E51B68
+$submitted-color: #888
 
 // Font Properties
 $font-size-base: 13px
@@ -195,19 +196,21 @@ body
     clear: left
     padding-left: $page-padding
     width: 250px
-    color: #888
+    color: $submitted-color
 
 a#logo
   float: left
   padding-top: 7px
- 
+
+#main
+  padding-top: 30px
+
 #content
   +clearfix
-  padding-top: 20px
   a.feed-icon
     display: none
   .region-content
-    padding: 10px 0 25px
+    padding: 0 0 25px
 
 #footer
   +clearfix
@@ -251,6 +254,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
   text-transform: uppercase
   font-weight: normal
   letter-spacing: $font-letter-spacing-headlines
+  margin: 7px 0 10px
 
 h1
   font-size: $font-size-h1
@@ -258,12 +262,19 @@ h1
 h2 
   font-size: $font-size-h2
 
+.sidebar h2 
+  text-transform: none
+  line-height: 1.2
+
 /** Links, Taxonomy etc **/
 a
   color: $link-color
   text-decoration: none
   &:hover, &:active
     text-decoration: underline 
+
+p 
+  margin: 10px 0 11px
 
 /*--------------------------------*/
 /* Drupal-specific Micro-Elements */
@@ -280,6 +291,10 @@ ul.action-links
 
 div.messages, div.status 
   margin-top: 30px
+
+.submitted
+  font-size: $font-size-minus-two
+  color: $submitted-color
 
 /*--------------------------------*/
 /*---------- Comments ------------*/
@@ -316,8 +331,25 @@ div.messages, div.status
         .comment-date
           float: right
           font-size: $font-size-minus-two
-          color: #888
+          color: $submitted-color
           float: right
+ul.inline
+  li.comment-add 
+    padding: 15px 0 0 0
+    a 
+      background: url(../images/comment-icon.png) no-repeat 0 center
+      padding-left: 25px
+      color: $link-color
+
+/*--------------------------------*/
+/*------------- Blog ------------*/
+/*--------------------------------*/
+
+.node 
+  .field-name-field-tags
+    margin-bottom: 15px
+
+
 
 /*--------------------------------*/
 /*------- Wysiwyg Formate -------*/
