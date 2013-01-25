@@ -57,9 +57,9 @@ registry_rebuild_rebuild();
  */
 function define_drupal_root() {
   // This is the smallest number of directories to go up: from /sites/all/modules/registry_rebuild.
-  $parent_count = 4;
+  $parent_count = 5;
   // 8 seems reasonably far to go looking up.
-  while ($parent_count < 8) {
+  while ($parent_count < 10) {
     $dir = realpath(getcwd() . str_repeat('/..', $parent_count));
     if (file_exists($dir . '/index.php')) {
       return $dir;
