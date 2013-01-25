@@ -19,9 +19,6 @@
 User-agent: *
 Crawl-delay: 10
 # Directories
-#only temporary till go live
-Disallow: /
-#######
 Disallow: /includes/
 Disallow: /misc/
 Disallow: /modules/
