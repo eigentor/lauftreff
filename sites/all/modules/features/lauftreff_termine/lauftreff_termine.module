@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Lauftreff Termine feature.
+ */
+
+include_once 'lauftreff_termine.features.inc';

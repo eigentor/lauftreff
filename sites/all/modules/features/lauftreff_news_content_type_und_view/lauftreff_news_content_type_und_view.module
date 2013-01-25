@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Lauftreff News Content Type und view feature.
+ */
+
+include_once 'lauftreff_news_content_type_und_view.features.inc';
