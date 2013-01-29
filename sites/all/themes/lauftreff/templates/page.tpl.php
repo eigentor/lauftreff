@@ -22,11 +22,13 @@
             <?php endif; ?>
           <?php endif; ?>
 
-          <?php if ($site_slogan): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-          <!-- Additional header_info region for Meeting point time or other info below or besides site title -->
-          <?php if ($page['header_info']): ?><div id="header-info"><?php print render($page['header_info']); ?></div><?php endif; ?>
+          <div id="slogan-info-wrapper">
+            <?php if ($site_slogan): ?>
+                      <div id="site-slogan"><?php print $site_slogan; ?></div>
+                    <?php endif; ?>
+                    <!-- Additional header_info region for Meeting point time or other info below or besides site title -->
+                    <?php if ($page['header_info']): ?><div id="header-info"><?php print render($page['header_info']); ?></div><?php endif; ?>
+              </div>
         </div> <!-- /#name-and-slogan -->
       <?php endif; ?>
       <div id="header-image">

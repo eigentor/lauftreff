@@ -15,7 +15,7 @@ $gutter-width   : 10px
 $grid-padding   : $page-padding 
 
 // Colors
-$body-base-font-color: #444
+$body-base-font-color: #222
 $primary-color: #0086C4
 $secondary-color: #0086C4
 $secondary-color-areas: #009BDD
@@ -38,6 +38,8 @@ $font-letter-spacing-base: 0.00em
 $font-letter-spacing-headlines: 0.04em
 $font-size-h1: 2.2em
 $font-size-h2: 1.8em
+$font-size-termin: 1.3em
+
 $line-height-base: 1.5
 
 $font-family-copy: "AsapRegular",verdana, arial, helvetica, sans-serif
@@ -80,17 +82,9 @@ body
   zoom: 1
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3)
 
-.front #header
-  height: 328px
-  margin-right: (-$page-padding)
-  #header-image 
-    background: url(../images/header-laeufer.jpg) no-repeat right bottom
-    height: 296px
-    width: 705px
-    float: right
-
 #header 
-  margin: 0
+  position: relative
+  margin: 0 -35px
   ul#main-menu
     float: left
     margin: 0
@@ -120,12 +114,10 @@ body
 #header-bottom 
   height: 32px
   background: black
-  margin: 0 (-$page-padding)
   border-top: 5px solid white
   clear: both
 
 .front #header-bottom
-  margin: 0 0 0 (-$page-padding)
   border: 0
   
 
@@ -148,56 +140,8 @@ body
   float: left
   display: none
 
-#name-and-slogan
-  height: 108px
-  float: left
-  margin-left: (-$page-padding)
-  #site-name
-    padding: 10px 10px 15px $page-padding
-    background: black
-    font-family: $font-family-headlines
-    font-size: 35px
-    float: left
-    margin: 0 0 0.1em 0
-    text-transform: lowercase
-    font-weight: normal
-    line-height: 1.2
-    width: 230px
-    a
-      color: $body-base-font-color
-      font-weight: normal
-      color: white
-      &:hover
-        text-decoration: none
-  #site-slogan
-    float: left
-    font-family: $font-family-headlines
-      
-.front #name-and-slogan
-  width: 20%
-  height: 220px 
-  #site-name
-    padding: 10px 10px 15px $page-padding
-    font-size: 50px
-    float: left
-    margin: 0 0 0.1em 0
-    text-transform: lowercase
-    font-weight: normal
-    line-height: 1.2
-    width: 277px 
-  #site-slogan
-    padding-left: $page-padding
-    width: 250px
-    clear: left
-    font-size: 23px
-    line-height: 1.2
-    padding-bottom: 13px
-    padding-top: 14px
-  #header-info
-    clear: left
-    padding-left: $page-padding
-    width: 250px
-    color: $submitted-color
+
+    
 
 a#logo
   float: left
@@ -227,19 +171,6 @@ a#logo
   #footer-right
     +span-columns(4 omega,12)
     text-align: right
-
-/*--------------------------------*/
-/*-------- Desktop-Layout --------*/
-/*--------------------------------*/
-
-.sidebar-second #page
-  #content
-    +span-columns(9,12)
-    .section
-      padding-right: 30px
-  #sidebar-second
-    +span-columns(3 omega,12)
-
 
 /*--------------------------------*/
 /*---- Fonts, Micro-Elements -----*/
@@ -361,10 +292,129 @@ ul.inline
   .field-name-field-tags
     margin-bottom: 15px
 
+/*--------------------------------*/
+/*----- Termin Detailansicht -----*/
+/*--------------------------------*/
 
+.node-type-termin
+  .field-name-field-datum
+    font-size: $font-size-termin
+    font-family: $font-family-headlines
+    color: $pink
 
 /*--------------------------------*/
 /*------- Wysiwyg Formate -------*/
 /*--------------------------------*/
 body.cke_show_borders
   background: white
+
+
+/*--------------------------------*/
+/*-------- Desktop-Layout --------*/
+/*--------------------------------*/
+
+.sidebar-second #page
+  #content
+    +span-columns(9,12)
+    .section
+      padding-right: 30px
+  #sidebar-second
+    +span-columns(3 omega,12)
+
+.node-type-termin
+  .field-name-field-bild-termin
+    float: left
+    margin-right: 20px
+  .field-name-field-datum
+    float: left
+
+  .field-name-body
+    clear: left
+
+/*---------------------*/
+/*--- Header Desktop --*/
+/*---------------------*/
+
+#name-and-slogan
+  width: 545px
+  height: 110px
+  float: left
+  #site-name
+    padding: 10px 10px 15px $page-padding
+    background: black
+    font-family: $font-family-headlines
+    font-size: 35px
+    float: left
+    margin: 0 0 0.1em 0
+    text-transform: lowercase
+    font-weight: normal
+    line-height: 1.2
+    width: 230px
+    height: 85px
+    a
+      color: $body-base-font-color
+      font-weight: normal
+      color: white
+      &:hover
+        text-decoration: none
+  #slogan-info-wrapper
+    float: left
+    padding-left: 20px
+    background: #eee
+    height: 100%
+    width: 250px
+  #site-slogan
+    font-family: $font-family-headlines
+    font-size: 1.4em
+    line-height: 1.3
+    margin: 10px 0 4px
+    float: none
+  #header-info
+    color: #555
+      
+.front #name-and-slogan
+  width: 20%
+  height: 220px 
+  #site-name
+    padding: 10px 10px 15px $page-padding
+    font-size: 50px
+    float: left
+    margin: 0 0 0.1em 0
+    text-transform: lowercase
+    font-weight: normal
+    line-height: 1.2
+    width: 277px 
+    height: 120px
+  #slogan-info-wrapper
+    background: transparent
+    padding-left: 0
+  #site-slogan
+    padding-left: $page-padding
+    width: 250px
+    clear: left
+    font-size: 23px
+    line-height: 1.2
+    margin-top: 16px
+    margin-bottom: 13px
+  #header-info
+    clear: left
+    padding-left: $page-padding
+    width: 250px
+  
+#header-image 
+  background: url(../images/header-image-subpages.jpg) no-repeat right top
+  height: 110px
+  width: 475px
+  float: right
+  position: absolute
+  right: 0
+
+.front #header
+  height: 328px
+  margin-right: (-$page-padding)
+  #header-image 
+    position: relative
+    background: url(../images/header-laeufer.jpg) no-repeat right bottom
+    height: 296px
+    width: 705px
+    float: right
