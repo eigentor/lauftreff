@@ -82,57 +82,9 @@ body
   zoom: 1
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3)
 
-#header 
-  position: relative
-  margin: 0 -35px
-  ul#main-menu
-    float: left
-    margin: 0
-    width: 580px
-    li 
-      float: left
-      padding: 0
-      &.first
-        a 
-          padding-left: 10px
-      a
-        color: #EDF6F9
-        text-transform: uppercase 
-        line-height: 29px
-        font-size: 1.3em
-        display: inline-block
-        padding: 3px 10px 0
-      &.active
-        a
-          background: black
-          color: white
-          border-bottom: 3px solid #E51B68
-          //border-bottom: 4px solid $headline-color
-          //margin-top: 2px
-
-
-#header-bottom 
-  height: 32px
-  background: black
-  border-top: 5px solid white
-  clear: both
-
 .front #header-bottom
   border: 0
   
-
-#header-bottom-left 
-  height: 100%
-  width: 670px
-  background: $secondary-color-areas
-  float: left
-
-.header-bottom-left-inner 
-  float: left
-  height: 100%
-  width: 33px
-  background: $pink
-
 
 // Bis wir ein Logo haben
 #logo
@@ -308,10 +260,54 @@ ul.inline
 body.cke_show_borders
   background: white
 
-
+/*--------------------------------*/
 /*--------------------------------*/
 /*-------- Desktop-Layout --------*/
 /*--------------------------------*/
+/*--------------------------------*/
+
+#header 
+  position: relative
+  margin: 0 -35px
+  ul#main-menu
+    float: left
+    margin: 0
+    width: 580px
+    li 
+      float: left
+      padding: 0
+      &.first
+        a 
+          padding-left: 10px
+      a
+        color: #EDF6F9
+        text-transform: uppercase 
+        line-height: 29px
+        font-size: 1.3em
+        display: inline-block
+        padding: 3px 10px 0
+      &.active, &.active-trail
+        a
+          background: $pink
+          color: white
+
+#header-bottom 
+  height: 32px
+  background: black
+  border-top: 3px solid white
+  clear: both
+
+#header-bottom-left 
+  height: 100%
+  width: 670px
+  background: $secondary-color-areas
+  float: left
+
+.header-bottom-left-inner 
+  float: left
+  height: 100%
+  width: 27px
+  background: $secondary-color-areas
 
 .sidebar-second #page
   #content
@@ -361,8 +357,9 @@ body.cke_show_borders
     float: left
     padding-left: 20px
     background: #eee
-    height: 100%
+    height: 109px
     width: 250px
+    border-bottom: 1px solid #e8e8e8
   #site-slogan
     font-family: $font-family-headlines
     font-size: 1.4em
@@ -388,6 +385,7 @@ body.cke_show_borders
   #slogan-info-wrapper
     background: transparent
     padding-left: 0
+    border: 0
   #site-slogan
     padding-left: $page-padding
     width: 250px
