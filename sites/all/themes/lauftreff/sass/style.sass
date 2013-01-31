@@ -37,7 +37,7 @@ $font-size-minus-two: 0.83em
 $font-letter-spacing-base: 0.00em
 $font-letter-spacing-headlines: 0.04em
 $font-size-h1: 2.2em
-$font-size-h2: 1.8em
+$font-size-h2: 1.9em
 $font-size-termin: 1.3em
 
 $line-height-base: 1.5
@@ -103,7 +103,7 @@ a#logo
   padding-top: 30px
 
 #content
-  +clearfix
+  +legacy-pie-clearfix
   a.feed-icon
     display: none
   .region-content
@@ -141,7 +141,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1
   font-size: $font-size-h1
   text-transform: uppercase
-  letter-spacing: $font-letter-spacing-headlines 
 
 h2 
   font-size: $font-size-h2
@@ -294,7 +293,7 @@ body.cke_show_borders
 #header-bottom 
   height: 32px
   background: black
-  border-top: 3px solid white
+  border-top: 2px solid white
   clear: both
 
 #header-bottom-left 
@@ -368,6 +367,18 @@ body.cke_show_borders
     float: none
   #header-info
     color: #555
+
+#header-image 
+  background: url(../images/header-image-subpages.jpg) no-repeat right top
+  height: 110px
+  width: 475px
+  float: right
+  position: absolute
+  right: 0
+
+/*---------------------------*/
+/*------- Startseite --------*/
+/*---------------------------*/
       
 .front #name-and-slogan
   width: 20%
@@ -398,21 +409,60 @@ body.cke_show_borders
     clear: left
     padding-left: $page-padding
     width: 250px
-  
-#header-image 
-  background: url(../images/header-image-subpages.jpg) no-repeat right top
-  height: 110px
-  width: 475px
-  float: right
-  position: absolute
-  right: 0
 
-.front #header
-  height: 328px
-  margin-right: (-$page-padding)
+$front-left-background: #F5F5F5
+
+.front
+  #header
+    height: 328px
+    margin-right: (-$page-padding)
   #header-image 
     position: relative
     background: url(../images/header-laeufer.jpg) no-repeat right bottom
     height: 296px
     width: 705px
     float: right
+  .header-bottom-left-inner 
+    width: 34px
+  #main 
+    padding-top: 0
+  .field-name-title, .field-name-body
+    +legacy-pie-clearfix
+  h1 
+    +span-columns(8,12) 
+    font-size: $font-size-h2
+    text-transform: none
+    line-height: 1.2
+    margin: 0
+    padding-top: 30px
+    height: 30px
+    margin-left: -($page-padding)
+    padding-left: $page-padding
+    background: $front-left-background
+  .front-left
+    +span-columns(8,12)
+    margin-left: -($page-padding)
+    padding-left: $page-padding
+    background: $front-left-background
+    height: 180px
+    p 
+      padding-right: 20px
+  h1, .front-left
+    margin-right: 0
+    padding-right: 2px
+
+  .front-right
+    +span-columns(omega 4,12)
+    margin-right: -($page-padding)
+    padding-right: $page-padding
+    background: #E2E2E2
+    margin-top: -60px
+    height: 240px
+    padding-left: 2px
+    h2 
+      margin-top: 0
+      padding-top: 30px
+    h2,p 
+      padding-left: 25px
+
+
