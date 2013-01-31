@@ -581,18 +581,19 @@ body.cke_show_borders {
   margin-left: -35px;
   padding-left: 35px;
   background: whitesmoke;
-  height: 180px;
+  height: 199px;
+  border-bottom: 1px solid #eaeaea;
 }
-/* line 448, ../sass/style.sass */
+/* line 449, ../sass/style.sass */
 .front .front-left p {
   padding-right: 20px;
 }
-/* line 450, ../sass/style.sass */
+/* line 451, ../sass/style.sass */
 .front h1, .front .front-left {
   margin-right: 0;
   padding-right: 2px;
 }
-/* line 454, ../sass/style.sass */
+/* line 455, ../sass/style.sass */
 .front .front-right {
   width: 32.63158%;
   float: right;
@@ -603,15 +604,15 @@ body.cke_show_borders {
   padding-right: 35px;
   background: #e2e2e2;
   margin-top: -60px;
-  height: 240px;
-  padding-left: 2px;
+  height: 260px;
+  padding-left: 3px;
 }
-/* line 462, ../sass/style.sass */
+/* line 463, ../sass/style.sass */
 .front .front-right h2 {
   margin-top: 0;
   padding-top: 30px;
 }
-/* line 465, ../sass/style.sass */
+/* line 466, ../sass/style.sass */
 .front .front-right h2, .front .front-right p {
   padding-left: 25px;
 }
