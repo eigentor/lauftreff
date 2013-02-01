@@ -632,40 +632,47 @@ body.cke_show_borders {
 }
 /* line 479, ../sass/style.sass */
 .front .front-middle div.media-element.file-mittel {
-  padding: 8px;
-  border: 1px solid #cccccc;
   height: auto !important;
   width: auto !important;
 }
+/* line 482, ../sass/style.sass */
+.front .front-middle div.media-element.file-mittel a {
+  display: block;
+}
 /* line 484, ../sass/style.sass */
+.front .front-middle img {
+  padding: 8px;
+  border: 1px solid #cccccc;
+}
+/* line 487, ../sass/style.sass */
 .front .front-middle .description-top, .front .front-middle .description-bottom {
   font-size: 0.93em;
   color: #999999;
 }
-/* line 487, ../sass/style.sass */
+/* line 490, ../sass/style.sass */
 .front .front-middle p.description-top {
   margin: 5px 0 10px;
   padding-left: 20px;
 }
-/* line 490, ../sass/style.sass */
+/* line 493, ../sass/style.sass */
 .front .front-middle p.description-bottom {
   margin: 2px 0 10px;
   padding-left: 2px;
 }
-/* line 494, ../sass/style.sass */
+/* line 497, ../sass/style.sass */
 .front .middle-left, .front .middle-middle, .front .middle-right {
   float: left;
   width: 29%;
 }
-/* line 497, ../sass/style.sass */
+/* line 500, ../sass/style.sass */
 .front .middle-left {
   padding-right: 2.6%;
 }
-/* line 499, ../sass/style.sass */
+/* line 502, ../sass/style.sass */
 .front .middle-middle {
   padding: 0px 2.6%;
 }
-/* line 501, ../sass/style.sass */
+/* line 504, ../sass/style.sass */
 .front .middle-right {
   padding-left: 2.6%;
 }
