@@ -631,7 +631,7 @@ body.cke_show_borders {
   font-size: 17px;
 }
 /* line 479, ../sass/style.sass */
-.front .front-middle .media-element.file-mittel {
+.front .front-middle div.media-element.file-mittel {
   padding: 8px;
   border: 1px solid #cccccc;
   height: auto !important;
