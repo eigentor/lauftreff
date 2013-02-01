@@ -645,34 +645,33 @@ body.cke_show_borders {
   border: 1px solid #cccccc;
 }
 /* line 487, ../sass/style.sass */
-.front .front-middle .description-top, .front .front-middle .description-bottom {
-  font-size: 0.93em;
-  color: #999999;
-}
-/* line 490, ../sass/style.sass */
 .front .front-middle p.description-top {
   margin: 5px 0 10px;
   padding-left: 20px;
+  color: #999999;
+  font-size: 0.93em;
 }
-/* line 493, ../sass/style.sass */
+/* line 492, ../sass/style.sass */
 .front .front-middle p.description-bottom {
   margin: 2px 0 10px;
   padding-left: 2px;
+  color: #999999;
+  font-size: 0.93em;
 }
-/* line 497, ../sass/style.sass */
+/* line 498, ../sass/style.sass */
 .front .middle-left, .front .middle-middle, .front .middle-right {
   float: left;
   width: 29%;
 }
-/* line 500, ../sass/style.sass */
+/* line 501, ../sass/style.sass */
 .front .middle-left {
   padding-right: 2.6%;
 }
-/* line 502, ../sass/style.sass */
+/* line 503, ../sass/style.sass */
 .front .middle-middle {
   padding: 0px 2.6%;
 }
-/* line 504, ../sass/style.sass */
+/* line 505, ../sass/style.sass */
 .front .middle-right {
   padding-left: 2.6%;
 }
