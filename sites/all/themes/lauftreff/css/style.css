@@ -616,3 +616,56 @@ body.cke_show_borders {
 .front .front-right h2, .front .front-right p {
   padding-left: 25px;
 }
+/* line 469, ../sass/style.sass */
+.front .front-middle {
+  clear: left;
+  padding-top: 22px;
+}
+/* line 472, ../sass/style.sass */
+.front .front-middle h3.strecke {
+  background: url("../images/square-bullet-magenta.png") no-repeat scroll 0 5px transparent;
+  color: #e51b68;
+  line-height: 1.2;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  font-size: 17px;
+}
+/* line 479, ../sass/style.sass */
+.front .front-middle img {
+  padding: 8px;
+  border: 1px solid #cccccc;
+  height: 266px !important;
+  width: auto !important;
+}
+/* line 484, ../sass/style.sass */
+.front .front-middle .description-top, .front .front-middle .description-bottom {
+  font-size: 0.93em;
+  color: #999999;
+}
+/* line 487, ../sass/style.sass */
+.front .front-middle p.description-top {
+  margin: 5px 0 10px;
+  padding-left: 20px;
+}
+/* line 490, ../sass/style.sass */
+.front .front-middle p.description-bottom {
+  margin: 2px 0 10px;
+  padding-left: 2px;
+}
+/* line 494, ../sass/style.sass */
+.front .middle-left, .front .middle-middle, .front .middle-right {
+  float: left;
+  width: 29%;
+}
+/* line 497, ../sass/style.sass */
+.front .middle-left {
+  padding-right: 2.6%;
+}
+/* line 499, ../sass/style.sass */
+.front .middle-middle {
+  padding: 0px 2.6%;
+}
+/* line 501, ../sass/style.sass */
+.front .middle-right {
+  padding-left: 2.6%;
+}
