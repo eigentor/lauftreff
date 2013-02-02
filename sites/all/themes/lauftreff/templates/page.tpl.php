@@ -68,7 +68,21 @@
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+
+        <?php if ($page['pagetop']): ?>
+          <div id="page-top" class="page-top"><div class="section">
+            <?php print render($page['pagetop']); ?>
+          </div></div> <!-- /.section, /#sidebar-first -->
+        <?php endif; ?>
+
         <?php print render($page['content']); ?>
+
+        <?php if ($page['pagebottom']): ?>
+          <div id="page-bottom" class="page-bottom"><div class="section">
+            <?php print render($page['pagebottom']); ?>
+         </div></div> <!-- /.section, /#sidebar-first -->
+        <?php endif; ?>
+
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 

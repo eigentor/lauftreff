@@ -10,13 +10,12 @@ stylesheets[all][] = css/style.css
 regions[header] = Header
 regions[header_info] = Header Info
 regions[help] = Help
-regions[page_top] = Page Top
-regions[page_bottom] = Page Bottom
 regions[highlighted] = Highlighted
+regions[pagetop] = Page Top
 regions[content] = Content
+regions[pagebottom] = Page Bottom
 regions[sidebar_first]  = Left sidebar
 regions[sidebar_second] = Right sidebar
 regions[footer] = Footer
-
 
 

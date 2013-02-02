@@ -451,6 +451,19 @@ $front-left-background: #F5F5F5
   h1, .front-left
     margin-right: 0
     padding-right: 2px
+  #page-bottom 
+    +legacy-pie-clearfix
+    background: #f1f1f1
+    border-top: 1px solid #e8e8e8
+    margin-top: 0
+    margin-bottom: 0
+    margin-left: -($page-padding)
+    margin-right: -($page-padding)
+    padding: 15px $page-padding
+    #block-views-blog-block-1
+      +span-columns(6, 12)
+    #block-views-termine-block-1
+      +span-columns(omega 6, 12)
 
   .front-right
     +span-columns(omega 4,12)
@@ -504,6 +517,7 @@ $front-left-background: #F5F5F5
     padding: 0px 2.6%
   .middle-right
     padding-left: 2.6%
+
 
 
 
