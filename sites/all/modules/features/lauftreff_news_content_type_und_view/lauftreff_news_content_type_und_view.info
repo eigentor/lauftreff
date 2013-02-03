@@ -6,7 +6,6 @@ php = 5.2.4
 dependencies[] = context
 dependencies[] = features
 dependencies[] = image
-dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

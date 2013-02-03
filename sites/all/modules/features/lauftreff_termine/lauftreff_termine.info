@@ -7,7 +7,6 @@ dependencies[] = date
 dependencies[] = features
 dependencies[] = link
 dependencies[] = media
-dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = timefield

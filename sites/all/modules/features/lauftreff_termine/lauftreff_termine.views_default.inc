@@ -84,6 +84,7 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '500';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Link */
@@ -93,11 +94,11 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Weiterlesen >>';
-  /* Sortierkriterien: Inhalt: Beitragsdatum */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sortierkriterien: Inhalt: Datum (field_datum) */
+  $handler->display->display_options['sorts']['field_datum_value']['id'] = 'field_datum_value';
+  $handler->display->display_options['sorts']['field_datum_value']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['sorts']['field_datum_value']['field'] = 'field_datum_value';
+  $handler->display->display_options['sorts']['field_datum_value']['order'] = 'DESC';
   /* Filterkriterium: Inhalt: Veröffentlicht */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -122,13 +123,61 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Mehr Termine';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Feld: Inhalt: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Bild */
+  $handler->display->display_options['fields']['field_bild_termin']['id'] = 'field_bild_termin';
+  $handler->display->display_options['fields']['field_bild_termin']['table'] = 'field_data_field_bild_termin';
+  $handler->display->display_options['fields']['field_bild_termin']['field'] = 'field_bild_termin';
+  $handler->display->display_options['fields']['field_bild_termin']['label'] = '';
+  $handler->display->display_options['fields']['field_bild_termin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bild_termin']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_bild_termin']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Feld: Inhalt: Datum */
+  $handler->display->display_options['fields']['field_datum']['id'] = 'field_datum';
+  $handler->display->display_options['fields']['field_datum']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['fields']['field_datum']['field'] = 'field_datum';
+  $handler->display->display_options['fields']['field_datum']['label'] = '';
+  $handler->display->display_options['fields']['field_datum']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_datum']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Feld: Inhalt: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '500';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Weiterlesen >>';
   $handler->display->display_options['path'] = 'termine';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
+  /* Display: Block Frontpage */
+  $handler = $view->new_display('block', 'Block Frontpage', 'block_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
@@ -164,6 +213,55 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['field_datum']['table'] = 'field_data_field_datum';
   $handler->display->display_options['fields']['field_datum']['field'] = 'field_datum';
   $handler->display->display_options['fields']['field_datum']['label'] = '';
+  $handler->display->display_options['fields']['field_datum']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_datum']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_datum']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Feld: Inhalt: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<span class="views-field-field-datum">[field_datum]</span>[body]';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '275';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+
+  /* Display: Block Sidebar */
+  $handler = $view->new_display('block', 'Block Sidebar', 'block_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Alle Termine';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Feld: Inhalt: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Datum */
+  $handler->display->display_options['fields']['field_datum']['id'] = 'field_datum';
+  $handler->display->display_options['fields']['field_datum']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['fields']['field_datum']['field'] = 'field_datum';
+  $handler->display->display_options['fields']['field_datum']['label'] = '';
   $handler->display->display_options['fields']['field_datum']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_datum']['settings'] = array(
     'format_type' => 'long',
@@ -178,6 +276,7 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Link */
@@ -205,8 +304,10 @@ function lauftreff_termine_views_default_views() {
     t('letzte Seite »'),
     t('Weiterlesen >>'),
     t('Page'),
-    t('Block'),
+    t('Block Frontpage'),
     t('Alle Termine'),
+    t('<span class="views-field-field-datum">[field_datum]</span>[body]'),
+    t('Block Sidebar'),
   );
   $export['termine'] = $view;
 

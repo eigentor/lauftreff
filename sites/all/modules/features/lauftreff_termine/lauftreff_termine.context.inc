@@ -34,9 +34,9 @@ function lauftreff_termine_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-termine-block_1' => array(
+        'views-termine-block_2' => array(
           'module' => 'views',
-          'delta' => 'termine-block_1',
+          'delta' => 'termine-block_2',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),

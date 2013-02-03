@@ -265,106 +265,6 @@ body.cke_show_borders
 /*--------------------------------*/
 /*--------------------------------*/
 
-#header 
-  position: relative
-  margin: 0 -35px
-  ul#main-menu
-    float: left
-    margin: 0
-    width: 580px
-    li 
-      float: left
-      padding: 0
-      &.first
-        a 
-          padding-left: 10px
-      a
-        color: #EDF6F9
-        text-transform: uppercase 
-        line-height: 29px
-        font-size: 1.3em
-        display: inline-block
-        padding: 3px 10px 0
-      &.active, &.active-trail
-        a
-          background: $pink
-          color: white
-
-#header-bottom 
-  height: 32px
-  background: black
-  border-top: 2px solid white
-  clear: both
-
-#header-bottom-left 
-  height: 100%
-  width: 670px
-  background: $secondary-color-areas
-  float: left
-
-.header-bottom-left-inner 
-  float: left
-  height: 100%
-  width: 27px
-  background: $secondary-color-areas
-
-.sidebar-second #page
-  #content
-    +span-columns(9,12)
-    .section
-      padding-right: 30px
-  #sidebar-second
-    +span-columns(3 omega,12)
-    .section
-      border-left: 1px dashed #ccc
-      margin-left: -20px
-      padding-left: 25px
-      margin-top: -30px
-      padding-top: 30px
-      margin-right: -($page-padding)
-      padding-right: $page-padding
-      padding-bottom: 20px
-      background: #f5f5f5
-      color: #818181
-      h2
-        background: url("../images/square-bullet-black.png") no-repeat 0 center
-        color: black
-        line-height: 1.2
-        margin-bottom: 10px
-        padding-left: 20px
-        font-size: 1.7em
-      .views-field-title
-        h3 
-          margin-bottom: 0
-          a 
-            color: $pink           
-            // color: black
-            // line-height: 1.2
-            // margin-bottom: 10px
-            // padding-left: 20px
-            // font-size: 17px
-      .views-field-field-datum
-        color: #333
-        margin-bottom: 2px
-        font-size: $font-size-minus-one
-      .views-field-body 
-        margin-bottom: 2px
-      p 
-        margin-top: 0
-        margin-bottom: 0
-      .views-field-view-node
-        font-size: $font-size-minus-one
-
-.node-type-termin
-  .field-name-field-bild-termin
-    float: left
-    margin-right: 20px
-  .field-name-field-datum
-    float: left
-
-  .field-name-body
-    clear: left
-
 /*---------------------*/
 /*--- Header Desktop --*/
 /*---------------------*/
@@ -513,10 +413,41 @@ $front-left-background: #F5F5F5
     margin-left: -($page-padding)
     margin-right: -($page-padding)
     padding: 15px $page-padding
+    color: #777
     #block-views-blog-block-1
       +span-columns(6, 12)
     #block-views-termine-block-1
       +span-columns(omega 6, 12)
+    .block 
+      h2 
+        font-size: 1.5em
+        color: #555
+        margin-top: 0
+        margin-bottom: 1px
+        background: url("../images/square-bullet-black.png") no-repeat 0 center
+        padding-left: 20px
+    
+      h3 
+        margin-top: 5px
+        margin-bottom: 2px
+      .views-field-body 
+        line-height: 1.3
+      .view-termine
+        h3 
+          margin-bottom: 1px
+        .views-field-field-bild-termin
+          float: left
+          margin-right: 15px
+          margin-left: 1px
+          margin-top: 3px
+        .views-field-field-datum
+          color: black
+          padding-right: 10px
+        .views-field-body
+          display: inline
+          p 
+            margin: 0
+            display: inline
 
   .front-right
     +span-columns(omega 4,12)
@@ -570,6 +501,108 @@ $front-left-background: #F5F5F5
     padding: 0px 2.6%
   .middle-right
     padding-left: 2.6%
+
+#header 
+  position: relative
+  margin: 0 -35px
+  ul#main-menu
+    float: left
+    margin: 0
+    width: 580px
+    li 
+      float: left
+      padding: 0
+      &.first
+        a 
+          padding-left: 10px
+      a
+        color: #EDF6F9
+        text-transform: uppercase 
+        line-height: 29px
+        font-size: 1.3em
+        display: inline-block
+        padding: 3px 10px 0
+      &.active, &.active-trail
+        a
+          background: $pink
+          color: white
+
+#header-bottom 
+  height: 32px
+  background: black
+  border-top: 2px solid white
+  clear: both
+
+#header-bottom-left 
+  height: 100%
+  width: 670px
+  background: $secondary-color-areas
+  float: left
+
+.header-bottom-left-inner 
+  float: left
+  height: 100%
+  width: 27px
+  background: $secondary-color-areas
+
+.sidebar-second #page
+  #content
+    +span-columns(9,12)
+    .section
+      padding-right: 30px
+  #sidebar-second
+    +span-columns(3 omega,12)
+    .section
+      border-left: 1px dashed #ccc
+      margin-left: -20px
+      padding-left: 25px
+      margin-top: -30px
+      padding-top: 30px
+      margin-right: -($page-padding)
+      padding-right: $page-padding
+      padding-bottom: 20px
+      background: #f5f5f5
+      color: #818181
+      h2
+        background: url("../images/square-bullet-black.png") no-repeat 0 center
+        color: black
+        line-height: 1.2
+        margin-bottom: 10px
+        padding-left: 20px
+        font-size: 1.7em
+      .views-field-title
+        h3 
+          margin-bottom: 0
+          a 
+            color: $pink           
+            // color: black
+            // line-height: 1.2
+            // margin-bottom: 10px
+            // padding-left: 20px
+            // font-size: 17px
+      .views-field-field-datum
+        color: #333
+        margin-bottom: 2px
+        font-size: $font-size-minus-one
+      .views-field-body 
+        margin-bottom: 2px
+      p 
+        margin-top: 0
+        margin-bottom: 0
+      .views-field-view-node
+        font-size: $font-size-minus-one
+
+.node-type-termin
+  .field-name-field-bild-termin
+    float: left
+    margin-right: 20px
+  .field-name-field-datum
+    float: left
+
+  .field-name-body
+    clear: left
+
+
 
 
 

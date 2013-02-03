@@ -98,8 +98,33 @@ function lauftreff_news_content_type_und_view_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
 
-  /* Display: Neueste News Block */
-  $handler = $view->new_display('block', 'Neueste News Block', 'block_1');
+  /* Display: Neueste News Block Startseite */
+  $handler = $view->new_display('block', 'Neueste News Block Startseite', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Neueste Blogeinträge';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Feld: Inhalt: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '145';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+
+  /* Display: Neueste News Block Sidebar */
+  $handler = $view->new_display('block', 'Neueste News Block Sidebar', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Neueste Blogeinträge';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -120,8 +145,9 @@ function lauftreff_news_content_type_und_view_views_default_views() {
     t('nächste Seite ›'),
     t('letzte Seite »'),
     t('Page'),
-    t('Neueste News Block'),
+    t('Neueste News Block Startseite'),
     t('Neueste Blogeinträge'),
+    t('Neueste News Block Sidebar'),
   );
   $export['blog'] = $view;
 
