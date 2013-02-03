@@ -50,7 +50,7 @@ function lauftreff_termine_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -220,7 +220,7 @@ function lauftreff_termine_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -315,7 +315,7 @@ function lauftreff_termine_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => '5',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -393,7 +393,7 @@ function lauftreff_termine_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -474,7 +474,7 @@ function lauftreff_termine_field_default_fields() {
             ),
           ),
           'type' => 'timefield_default',
-          'weight' => '6',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
