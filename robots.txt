@@ -20,10 +20,6 @@ User-agent: *
 Crawl-delay: 10
 # Directories
 
-## Temporary, for development
-Disallow: /
-#####
-
 Disallow: /includes/
 Disallow: /misc/
 Disallow: /modules/
