@@ -34,7 +34,7 @@ $font-size-plus-one: 1.1em
 $font-size-plus-two: 1.2em
 $font-size-minus-one: 0.93em
 $font-size-minus-two: 0.83em
-$font-letter-spacing-base: 0.00em
+$font-letter-spacing-base: 0.01em
 $font-letter-spacing-headlines: 0.04em
 $font-size-h1: 2.2em
 $font-size-h2: 1.9em
@@ -227,14 +227,36 @@ div.messages, div.status
     margin-top: 25px
 
 ul.inline
-  li.comment-add 
-    padding: 15px 0 0 0
+  li
     a 
-      background: url(../images/comment-icon.png) no-repeat 0 2px
-      padding-left: 25px
-      color: $link-color
+      font-size: $font-size-minus-one
+    &.comment-add 
+      //padding: 15px 0 0 0
+      a 
+        background: url(../images/comment-icon.png) no-repeat 0 2px
+        padding-left: 25px
+        color: $link-color
+        display: inline-block
+        line-height: 20px
+    &.first 
+      padding-left: 0
+
+// Tags
+.field-name-field-tags
+  .field-item 
+    display: inline    
+    margin-right: 10px    
+    a 
+      line-height: 1.3em
+      padding: 0.1em 8px 0
+      border: 1px solid #ddd
+      +border-radius(5px)
       display: inline-block
-      line-height: 20px
+      color: #9E5870
+      background: #f8f8f8
+
+
+
 
 /*--------------------------------*/
 /*------------- Blog ------------*/
@@ -253,6 +275,23 @@ ul.inline
 .node-type-article
   h1 
     margin-bottom: 5px
+
+/*--------------------------------*/
+/*------- Termine Übersicht ------*/
+/*--------------------------------*/
+
+.page-termine
+  .views-field-field-bild-termin 
+    float: left
+    margin: 5px 15px 5px 0
+  .views-field-field-datum 
+    float: left
+    color: $pink
+    font-family: $font-family-headlines
+    font-size: $font-size-plus-two
+  .views-field-body
+    clear: left
+
 
 /*--------------------------------*/
 /*----- Termin Detailansicht -----*/
