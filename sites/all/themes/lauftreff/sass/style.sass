@@ -261,16 +261,35 @@ ul.inline
 /*--------------------------------*/
 /*------------- Blog ------------*/
 /*--------------------------------*/
+.page-laufblog, .page-termine 
+  h1 
+    color: #777
 
 .node 
   .field-name-field-tags
     margin-bottom: 15px
 
-.page-laufblog 
+.page-laufblog
+  #content
+    .views-row 
+      margin-bottom: 15px
+      padding-bottom: 15px
+      border-bottom: 1px dashed #c5c5c5
+      &.views-row-last 
+        border: none 
   .node 
     .field-name-field-image
+      clear: both
       float: left
       margin: 5px 15px 5px 0
+    .field-name-field-tags
+      float: right
+      margin-bottom: 10px
+      font-size: $font-size-minus-one
+    .field-name-body 
+      clear: right
+    .submitted 
+      float: left
 
 .node-type-article
   h1 
@@ -282,6 +301,12 @@ ul.inline
 
 .page-termine
   #content
+    .views-row 
+      margin-bottom: 15px
+      padding-bottom: 15px
+      border-bottom: 1px dashed #c5c5c5
+      &.views-row-last 
+        border: none
     h2 
       margin-bottom: 5px
     .views-field-field-bild-termin
@@ -379,6 +404,7 @@ body.cke_show_borders
   position: absolute
   right: 0
   border-left: 2px solid white
+
 
 /*---------------------------*/
 /*------- Startseite --------*/
@@ -619,7 +645,7 @@ $front-left-background: #F5F5F5
   #content
     +span-columns(9,12)
     .section
-      padding-right: 30px
+      padding-right: 50px
   #sidebar-second
     +span-columns(3 omega,12)
     .section
