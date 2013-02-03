@@ -375,6 +375,7 @@ $front-left-background: #F5F5F5
     height: 296px
     width: 705px
     float: right
+    border-left: 0
   .header-bottom-left-inner 
     width: 34px
   #main 
@@ -409,15 +410,16 @@ $front-left-background: #F5F5F5
     background: #f1f1f1
     border-top: 1px solid #e8e8e8
     margin-top: 0
-    margin-bottom: 0
     margin-left: -($page-padding)
     margin-right: -($page-padding)
-    padding: 15px $page-padding
+    padding: 15px $page-padding 35px
     color: #777
     #block-views-blog-block-1
       +span-columns(6, 12)
     #block-views-termine-block-1
       +span-columns(omega 6, 12)
+      h2 
+        margin-left: 15px
     .block 
       h2 
         font-size: 1.5em
@@ -426,20 +428,32 @@ $front-left-background: #F5F5F5
         margin-bottom: 1px
         background: url("../images/square-bullet-black.png") no-repeat 0 center
         padding-left: 20px
+        
     
       h3 
         margin-top: 5px
-        margin-bottom: 2px
+        margin-bottom: 7px
       .views-field-body 
         line-height: 1.3
+      .view-blog
+        border-right: 1px solid #ccc
+        padding-right: 15px
+        margin-top: -20px
+        padding-top: 20px
+        .views-field-field-image
+          float: left
+          img
+            margin: 2px 15px 0 1px
       .view-termine
+        padding-left: 15px
         h3 
           margin-bottom: 1px
         .views-field-field-bild-termin
           float: left
-          margin-right: 15px
-          margin-left: 1px
-          margin-top: 3px
+          img
+            margin-right: 15px
+            margin-left: 1px
+            margin-top: 3px
         .views-field-field-datum
           color: black
           padding-right: 10px
