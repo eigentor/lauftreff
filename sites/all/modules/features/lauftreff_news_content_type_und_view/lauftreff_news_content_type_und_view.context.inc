@@ -34,9 +34,9 @@ function lauftreff_news_content_type_und_view_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-blog-block_1' => array(
+        'views-blog-block_2' => array(
           'module' => 'views',
-          'delta' => 'blog-block_1',
+          'delta' => 'blog-block_2',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
