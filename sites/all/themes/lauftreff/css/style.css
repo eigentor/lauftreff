@@ -966,3 +966,7 @@ body.cke_show_borders {
 .node-type-termin .field-name-body {
   clear: left;
 }
+/* line 705, ../sass/style.sass */
+.node-type-termin .field-name-field-link-veranst-website {
+  margin-top: 10px;
+}
