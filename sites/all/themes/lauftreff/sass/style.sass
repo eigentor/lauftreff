@@ -514,7 +514,9 @@ $front-left-background: #F5F5F5
     
       h3 
         margin-top: 5px
-        margin-bottom: 7px
+        margin-bottom: 3px
+      .views-row 
+        margin-bottom: 8px
       .views-field-body 
         line-height: 1.3
       .view-blog
@@ -525,9 +527,11 @@ $front-left-background: #F5F5F5
         .views-field-field-image
           float: left
           img
-            margin: 2px 15px 0 1px
+            margin: 4px 15px 0 1px
       .view-termine
         padding-left: 15px
+        .views-row 
+          +legacy-pie-clearfix
         h3 
           margin-bottom: 1px
         .views-field-field-bild-termin
@@ -536,6 +540,9 @@ $front-left-background: #F5F5F5
             margin-right: 15px
             margin-left: 1px
             margin-top: 3px
+        .views-field-field-bild-termin
+          img
+            margin-top: 4px
         .views-field-field-datum
           color: black
           padding-right: 10px
