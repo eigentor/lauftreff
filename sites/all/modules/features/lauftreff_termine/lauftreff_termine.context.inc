@@ -28,6 +28,7 @@ function lauftreff_termine_context_default_contexts() {
     'path' => array(
       'values' => array(
         'termine' => 'termine',
+        'termine/*' => 'termine/*',
       ),
     ),
   );

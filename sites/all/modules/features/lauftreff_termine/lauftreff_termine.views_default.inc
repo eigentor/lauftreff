@@ -22,7 +22,7 @@ function lauftreff_termine_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Termine';
+  $handler->display->display_options['title'] = 'Kommmende Termine';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Mehr Termine';
@@ -45,6 +45,13 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Verhalten, wenn keine Ergebnisse vorliegen: Global: Textbereich */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Es gibt keine Einträge.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -113,9 +120,17 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'termin' => 'termin',
   );
+  /* Filterkriterium: Inhalt: Datum (field_datum) */
+  $handler->display->display_options['filters']['field_datum_value']['id'] = 'field_datum_value';
+  $handler->display->display_options['filters']['field_datum_value']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['filters']['field_datum_value']['field'] = 'field_datum_value';
+  $handler->display->display_options['filters']['field_datum_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_datum_value']['value']['value'] = 'NOW';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Page kommende Termine */
+  $handler = $view->new_display('page', 'Page kommende Termine', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Kommende Termine';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -172,7 +187,124 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Weiterlesen >>';
-  $handler->display->display_options['path'] = 'termine';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterium: Inhalt: Veröffentlicht */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterium: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'termin' => 'termin',
+  );
+  /* Filterkriterium: Inhalt: Datum (field_datum) */
+  $handler->display->display_options['filters']['field_datum_value']['id'] = 'field_datum_value';
+  $handler->display->display_options['filters']['field_datum_value']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['filters']['field_datum_value']['field'] = 'field_datum_value';
+  $handler->display->display_options['filters']['field_datum_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_datum_value']['value']['value'] = 'NOW';
+  $handler->display->display_options['path'] = 'termine/kommend';
+  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['menu']['title'] = 'Kommende Termine';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['tab_options']['type'] = 'normal';
+  $handler->display->display_options['tab_options']['title'] = 'Termine';
+  $handler->display->display_options['tab_options']['weight'] = '0';
+
+  /* Display: Page vergangene Termine */
+  $handler = $view->new_display('page', 'Page vergangene Termine', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Vergangen';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Mehr Termine';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Feld: Inhalt: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Bild */
+  $handler->display->display_options['fields']['field_bild_termin']['id'] = 'field_bild_termin';
+  $handler->display->display_options['fields']['field_bild_termin']['table'] = 'field_data_field_bild_termin';
+  $handler->display->display_options['fields']['field_bild_termin']['field'] = 'field_bild_termin';
+  $handler->display->display_options['fields']['field_bild_termin']['label'] = '';
+  $handler->display->display_options['fields']['field_bild_termin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bild_termin']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_bild_termin']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Feld: Inhalt: Datum */
+  $handler->display->display_options['fields']['field_datum']['id'] = 'field_datum';
+  $handler->display->display_options['fields']['field_datum']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['fields']['field_datum']['field'] = 'field_datum';
+  $handler->display->display_options['fields']['field_datum']['label'] = '';
+  $handler->display->display_options['fields']['field_datum']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_datum']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Feld: Inhalt: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '500';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Weiterlesen >>';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterium: Inhalt: Veröffentlicht */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterium: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'termin' => 'termin',
+  );
+  /* Filterkriterium: Inhalt: Datum (field_datum) */
+  $handler->display->display_options['filters']['field_datum_value']['id'] = 'field_datum_value';
+  $handler->display->display_options['filters']['field_datum_value']['table'] = 'field_data_field_datum';
+  $handler->display->display_options['filters']['field_datum_value']['field'] = 'field_datum_value';
+  $handler->display->display_options['filters']['field_datum_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_datum_value']['value']['value'] = 'NOW';
+  $handler->display->display_options['path'] = 'termine/vergangen';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Vergangen';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
 
   /* Display: Block Frontpage */
   $handler = $view->new_display('block', 'Block Frontpage', 'block_1');
@@ -288,7 +420,7 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['view_node']['text'] = 'Weiterlesen >>';
   $translatables['termine'] = array(
     t('Master'),
-    t('Termine'),
+    t('Kommmende Termine'),
     t('Mehr Termine'),
     t('Anwenden'),
     t('Zurücksetzen'),
@@ -302,8 +434,12 @@ function lauftreff_termine_views_default_views() {
     t('‹ vorherige Seite'),
     t('nächste Seite ›'),
     t('letzte Seite »'),
+    t('Es gibt keine Einträge.'),
     t('Weiterlesen >>'),
-    t('Page'),
+    t('Page kommende Termine'),
+    t('Kommende Termine'),
+    t('Page vergangene Termine'),
+    t('Vergangen'),
     t('Block Frontpage'),
     t('Alle Termine'),
     t('<span class="views-field-field-datum">[field_datum]</span>[body]'),

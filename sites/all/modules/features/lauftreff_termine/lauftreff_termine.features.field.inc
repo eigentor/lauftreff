@@ -65,16 +65,39 @@ function lauftreff_termine_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'body',
       'label' => 'Body',
-      'required' => FALSE,
+      'required' => 1,
       'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'plain_text' => 'plain_text',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
+                'weight' => '1',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+            ),
+          ),
+        ),
+        'display_summary' => 1,
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => 20,
+          'rows' => '20',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
@@ -144,7 +167,7 @@ function lauftreff_termine_field_default_fields() {
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
+        'max_filesize' => '5 MB',
         'max_resolution' => '',
         'min_resolution' => '',
         'title_field' => 0,
@@ -459,7 +482,7 @@ function lauftreff_termine_field_default_fields() {
       'bundle' => 'termin',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Dieses Feld ist optional und kann leer gelassen werden.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -525,6 +548,7 @@ function lauftreff_termine_field_default_fields() {
   t('Body');
   t('Dateianhang');
   t('Datum');
+  t('Dieses Feld ist optional und kann leer gelassen werden.');
   t('Link zur Veranstaltungswebsite');
   t('Uhrzeit');
 
