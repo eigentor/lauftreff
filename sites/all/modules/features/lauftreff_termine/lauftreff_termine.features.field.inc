@@ -338,7 +338,7 @@ function lauftreff_termine_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -497,7 +497,7 @@ function lauftreff_termine_field_default_fields() {
             ),
           ),
           'type' => 'timefield_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',

@@ -105,7 +105,6 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['sorts']['field_datum_value']['id'] = 'field_datum_value';
   $handler->display->display_options['sorts']['field_datum_value']['table'] = 'field_data_field_datum';
   $handler->display->display_options['sorts']['field_datum_value']['field'] = 'field_datum_value';
-  $handler->display->display_options['sorts']['field_datum_value']['order'] = 'DESC';
   /* Filterkriterium: Inhalt: Veröffentlicht */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

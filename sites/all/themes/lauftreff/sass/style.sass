@@ -329,10 +329,26 @@ ul.inline
 /*--------------------------------*/
 
 .node-type-termin
+  .group_logo_termin
+    +legacy-pie-clearfix
+    display: table-cell
+    vertical-align: middle
+  .group_date_time 
+    +legacy-pie-clearfix
+    display: table-cell
+    vertical-align: middle
+    float: left
+    padding: 7px 12px
+    background: #eee
+    border: 1px solid #ddd
   .field-name-field-datum
     font-size: $font-size-termin
     font-family: $font-family-headlines
     color: $pink
+  .field-name-field-uhrzeit
+    font-size: $font-size-termin
+    font-family: $font-family-headlines
+    padding-left: 6px
 
 /*--------------------------------*/
 /*------- Wysiwyg Formate -------*/
@@ -698,6 +714,8 @@ $front-left-background: #F5F5F5
     float: left
     margin-right: 20px
   .field-name-field-datum
+    float: left
+  .field-name-field-uhrzeit
     float: left
 
   .field-name-body
