@@ -16,6 +16,9 @@ function lauftreff_termine_ctools_plugin_api() {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+  if ($module == 'field_group' && $api == 'field_group') {
+    return array('version' => 1);
+  } 
 }
 
 /**
