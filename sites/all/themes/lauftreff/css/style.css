@@ -706,36 +706,47 @@ body.cke_show_borders {
 /* line 529, ../sass/style.sass */
 .front #page-bottom .block h3 {
   margin-top: 5px;
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 /* line 532, ../sass/style.sass */
 .front #page-bottom .block .views-row {
   margin-bottom: 8px;
+  *zoom: 1;
 }
-/* line 534, ../sass/style.sass */
+/* line 22, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.front #page-bottom .block .views-row:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 535, ../sass/style.sass */
 .front #page-bottom .block .views-field-body {
   line-height: 1.3;
 }
-/* line 536, ../sass/style.sass */
+/* line 537, ../sass/style.sass */
 .front #page-bottom .block .view-blog {
   border-right: 1px solid #cccccc;
   padding-right: 15px;
   margin-top: -20px;
   padding-top: 20px;
 }
-/* line 541, ../sass/style.sass */
-.front #page-bottom .block .view-blog .views-field-field-image {
+/* line 542, ../sass/style.sass */
+.front #page-bottom .block .views-field-field-image {
   float: left;
 }
-/* line 543, ../sass/style.sass */
-.front #page-bottom .block .view-blog .views-field-field-image img {
+/* line 544, ../sass/style.sass */
+.front #page-bottom .block img {
   margin: 4px 15px 0 1px;
+  border: 1px solid #dddddd;
 }
-/* line 545, ../sass/style.sass */
+/* line 547, ../sass/style.sass */
 .front #page-bottom .block .view-termine {
   padding-left: 15px;
 }
-/* line 547, ../sass/style.sass */
+/* line 549, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-row {
   *zoom: 1;
 }
@@ -747,10 +758,6 @@ body.cke_show_borders {
   clear: both;
   overflow: hidden;
   visibility: hidden;
-}
-/* line 549, ../sass/style.sass */
-.front #page-bottom .block .view-termine h3 {
-  margin-bottom: 1px;
 }
 /* line 551, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-field-bild-termin {
