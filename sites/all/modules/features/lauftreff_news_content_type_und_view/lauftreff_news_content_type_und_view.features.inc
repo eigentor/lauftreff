@@ -35,7 +35,7 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
   $styles['blog_main_image'] = array(
     'name' => 'blog_main_image',
     'effects' => array(
-      3 => array(
+      4 => array(
         'label' => 'Skalierung',
         'help' => 'Eine Skalierung behält das Seitenverhältnis des Originalbildes bei. Sofern nur eine Seitenlänge angegeben ist, wird die andere berechnet.',
         'effect callback' => 'image_scale_effect',
@@ -51,22 +51,6 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
         ),
         'weight' => '-10',
       ),
-      4 => array(
-        'label' => 'Zuschneiden',
-        'help' => 'Das Zuschneiden wird Teile von einem Bild entfernen, um es an die angegebene Größe anpassen zu können.',
-        'effect callback' => 'image_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_crop_form',
-        'summary theme' => 'image_crop_summary',
-        'module' => 'image',
-        'name' => 'image_crop',
-        'data' => array(
-          'width' => '640',
-          'height' => '250',
-          'anchor' => 'center-center',
-        ),
-        'weight' => '-8',
-      ),
     ),
   );
 
@@ -74,7 +58,7 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
   $styles['news_thumbnail'] = array(
     'name' => 'news_thumbnail',
     'effects' => array(
-      5 => array(
+      6 => array(
         'label' => 'Skalierung',
         'help' => 'Eine Skalierung behält das Seitenverhältnis des Originalbildes bei. Sofern nur eine Seitenlänge angegeben ist, wird die andere berechnet.',
         'effect callback' => 'image_scale_effect',
@@ -90,6 +74,22 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
         ),
         'weight' => '1',
       ),
+      7 => array(
+        'label' => 'Zuschneiden',
+        'help' => 'Das Zuschneiden wird Teile von einem Bild entfernen, um es an die angegebene Größe anpassen zu können.',
+        'effect callback' => 'image_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_crop_form',
+        'summary theme' => 'image_crop_summary',
+        'module' => 'image',
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => '100',
+          'height' => '50',
+          'anchor' => 'center-center',
+        ),
+        'weight' => '2',
+      ),
     ),
   );
 
@@ -102,7 +102,7 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
 function lauftreff_news_content_type_und_view_node_info() {
   $items = array(
     'article' => array(
-      'name' => t('Article'),
+      'name' => t('Blogeintrag'),
       'base' => 'node_content',
       'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
       'has_title' => '1',

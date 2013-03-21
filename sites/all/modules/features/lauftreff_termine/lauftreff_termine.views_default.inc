@@ -125,6 +125,15 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['filters']['field_datum_value']['field'] = 'field_datum_value';
   $handler->display->display_options['filters']['field_datum_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_datum_value']['value']['value'] = 'NOW';
+  /* Filterkriterium: Inhalt: Ist der Termin aktuell? (field_ist_der_termin_aktuell_) */
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['id'] = 'field_ist_der_termin_aktuell__tid';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['table'] = 'field_data_field_ist_der_termin_aktuell_';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['field'] = 'field_ist_der_termin_aktuell__tid';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['value'] = array(
+    12 => '12',
+  );
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['vocabulary'] = 'termine_aktualit_t';
 
   /* Display: Page kommende Termine */
   $handler = $view->new_display('page', 'Page kommende Termine', 'page');
@@ -177,6 +186,7 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '500';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Link */
@@ -186,28 +196,6 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Weiterlesen >>';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterium: Inhalt: Veröffentlicht */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterium: Inhalt: Typ */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'termin' => 'termin',
-  );
-  /* Filterkriterium: Inhalt: Datum (field_datum) */
-  $handler->display->display_options['filters']['field_datum_value']['id'] = 'field_datum_value';
-  $handler->display->display_options['filters']['field_datum_value']['table'] = 'field_data_field_datum';
-  $handler->display->display_options['filters']['field_datum_value']['field'] = 'field_datum_value';
-  $handler->display->display_options['filters']['field_datum_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_datum_value']['value']['value'] = 'NOW';
   $handler->display->display_options['path'] = 'termine/kommend';
   $handler->display->display_options['menu']['type'] = 'default tab';
   $handler->display->display_options['menu']['title'] = 'Kommende Termine';
@@ -293,12 +281,15 @@ function lauftreff_termine_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'termin' => 'termin',
   );
-  /* Filterkriterium: Inhalt: Datum (field_datum) */
-  $handler->display->display_options['filters']['field_datum_value']['id'] = 'field_datum_value';
-  $handler->display->display_options['filters']['field_datum_value']['table'] = 'field_data_field_datum';
-  $handler->display->display_options['filters']['field_datum_value']['field'] = 'field_datum_value';
-  $handler->display->display_options['filters']['field_datum_value']['operator'] = '<=';
-  $handler->display->display_options['filters']['field_datum_value']['value']['value'] = 'NOW';
+  /* Filterkriterium: Inhalt: Ist der Termin aktuell? (field_ist_der_termin_aktuell_) */
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['id'] = 'field_ist_der_termin_aktuell__tid';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['table'] = 'field_data_field_ist_der_termin_aktuell_';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['field'] = 'field_ist_der_termin_aktuell__tid';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['value'] = array(
+    13 => '13',
+  );
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ist_der_termin_aktuell__tid']['vocabulary'] = 'termine_aktualit_t';
   $handler->display->display_options['path'] = 'termine/vergangen';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Vergangen';

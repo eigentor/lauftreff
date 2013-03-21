@@ -146,7 +146,7 @@ function lauftreff_termine_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'veranstalter-logo-termin',
           ),
           'type' => 'image',
           'weight' => '0',
@@ -287,7 +287,7 @@ function lauftreff_termine_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -375,6 +375,81 @@ function lauftreff_termine_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-termin-field_ist_der_termin_aktuell_'.
+  $fields['node-termin-field_ist_der_termin_aktuell_'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ist_der_termin_aktuell_',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'termine_aktualit_t',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'termin',
+      'default_value' => array(
+        0 => array(
+          'tid' => '12',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 6,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_ist_der_termin_aktuell_',
+      'label' => 'Ist der Termin aktuell?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '6',
+      ),
+    ),
+  );
+
   // Exported field: 'node-termin-field_link_veranst_website'.
   $fields['node-termin-field_link_veranst_website'] = array(
     'field_config' => array(
@@ -453,7 +528,7 @@ function lauftreff_termine_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -549,6 +624,7 @@ function lauftreff_termine_field_default_fields() {
   t('Dateianhang');
   t('Datum');
   t('Dieses Feld ist optional und kann leer gelassen werden.');
+  t('Ist der Termin aktuell?');
   t('Link zur Veranstaltungswebsite');
   t('Uhrzeit');
 
