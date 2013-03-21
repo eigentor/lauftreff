@@ -1,9 +1,8 @@
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings.local.php
+sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-.sass-cache
-*.sublime-project
-*.sublime-workspace
+
+*.scssc

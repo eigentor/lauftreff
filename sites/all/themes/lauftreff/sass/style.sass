@@ -39,6 +39,7 @@ $font-letter-spacing-base: 0.01em
 $font-letter-spacing-headlines: 0.04em
 $font-size-h1: 2.2em
 $font-size-h2: 1.9em
+$font-size-h3: 1.4em
 $font-size-termin: 1.3em
 
 $line-height-base: 1.5
@@ -145,6 +146,10 @@ h1
 
 h2 
   font-size: $font-size-h2
+
+h3 
+  font-size: $font-size-h3
+  font-weight: normal
 
 .sidebar h2 
   text-transform: none
@@ -295,6 +300,25 @@ ul.inline
 .node-type-article
   h1 
     margin-bottom: 5px
+  .submitted 
+    float: left
+  .field-name-field-tags
+    float: right
+  .field-name-body 
+    clear: both
+  .field-name-field-blog-bildergalerie
+    .field-label 
+      font-size: $font-size-h3
+      color: #0086C4
+      font-family: $font-family-headlines
+      margin-bottom: 10px
+      font-weight: normal
+    .field-item 
+      float: left
+      img 
+        margin: 0 10px 10px 0
+  #comments
+    clear: both
 
 /*** Views von Artikeln, gilt für Blog und Termine ***/
 .views-row .node 
