@@ -6,3 +6,5 @@ sites/*/files
 sites/*/private
 
 *.scssc
+*.sublime-workspace
+*.sublime-project
