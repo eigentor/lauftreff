@@ -31,6 +31,28 @@ function lauftreff_news_content_type_und_view_views_api() {
 function lauftreff_news_content_type_und_view_image_default_styles() {
   $styles = array();
 
+  // Exported image style: bildergalerie_thumbnail.
+  $styles['bildergalerie_thumbnail'] = array(
+    'name' => 'bildergalerie_thumbnail',
+    'effects' => array(
+      8 => array(
+        'label' => 'Skalieren und zuschneiden',
+        'help' => 'Skalieren und zuschneiden wird das Seitenverhältnis des ursprünglichen Bildes erhalten, und dann die überstehenden Ränder entfernen. Dies ist besonders nützlich für die Erstellung von perfekt quadratischen Vorschaubildern ohne Verzerrung des Bildes.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '140',
+          'height' => '140',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: blog_main_image.
   $styles['blog_main_image'] = array(
     'name' => 'blog_main_image',

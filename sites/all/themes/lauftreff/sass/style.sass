@@ -302,11 +302,14 @@ ul.inline
     margin-bottom: 5px
   .submitted 
     float: left
+    margin-top: 5px
   .field-name-field-tags
     float: right
   .field-name-body 
     clear: both
   .field-name-field-blog-bildergalerie
+    +legacy-pie-clearfix
+    margin-bottom: -10px
     .field-label 
       font-size: $font-size-h3
       color: #0086C4
@@ -316,7 +319,8 @@ ul.inline
     .field-item 
       float: left
       img 
-        margin: 0 10px 10px 0
+        margin: 0 20px 15px 0
+        border: 1px solid #ddd
   #comments
     clear: both
 
