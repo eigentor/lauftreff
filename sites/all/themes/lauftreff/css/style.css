@@ -763,10 +763,11 @@ body.cke_show_borders {
   background: url("../images/square-bullet-black.png") no-repeat 0 center;
   padding-left: 20px;
 }
-/* line 563, ../sass/style.sass */
+/* line 562, ../sass/style.sass */
 .front #page-bottom .block h3 {
   margin-top: 5px;
   margin-bottom: 1px;
+  font-size: 1.1em;
 }
 /* line 566, ../sass/style.sass */
 .front #page-bottom .block .views-row {
