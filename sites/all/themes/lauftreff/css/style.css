@@ -196,14 +196,26 @@ p {
   margin: 10px 0 11px;
 }
 
+/* line 173, ../sass/style.sass */
+.imagefloatleft {
+  float: left;
+  margin: 3px 15px 5px 0;
+}
+
+/* line 177, ../sass/style.sass */
+.imagefloatright {
+  float: right;
+  margin: 3px 0 5px 15px;
+}
+
 /*-------------------------------- */
 /* Drupal-specific Micro-Elements */
 /*-------------------------------- */
-/* line 177, ../sass/style.sass */
+/* line 185, ../sass/style.sass */
 ul.action-links {
   padding-left: 3px;
 }
-/* line 179, ../sass/style.sass */
+/* line 187, ../sass/style.sass */
 ul.action-links li {
   list-style: none;
   list-image: none;
@@ -212,12 +224,12 @@ ul.action-links li {
   font-size: 1.1em;
 }
 
-/* line 186, ../sass/style.sass */
+/* line 194, ../sass/style.sass */
 div.messages, div.status {
   margin-top: 30px;
 }
 
-/* line 189, ../sass/style.sass */
+/* line 197, ../sass/style.sass */
 .submitted {
   font-size: 0.83em;
   color: #888888;
@@ -227,7 +239,7 @@ div.messages, div.status {
 /*-------------------------------- */
 /*---------- Comments ------------ */
 /*-------------------------------- */
-/* line 199, ../sass/style.sass */
+/* line 207, ../sass/style.sass */
 #comments .comment {
   overflow: hidden;
   *zoom: 1;
@@ -236,60 +248,60 @@ div.messages, div.status {
   padding: 15px 25px 15px 17px;
   margin-bottom: 20px;
 }
-/* line 205, ../sass/style.sass */
+/* line 213, ../sass/style.sass */
 #comments .comment .user-picture-wrapper {
   float: left;
   width: 14%;
   padding-top: 5px;
 }
-/* line 209, ../sass/style.sass */
+/* line 217, ../sass/style.sass */
 #comments .comment .user-picture-wrapper img {
   border: 1px solid #d5d5d5;
 }
-/* line 211, ../sass/style.sass */
+/* line 219, ../sass/style.sass */
 #comments .comment .user-picture-wrapper .comment-author {
   font-size: 0.83em;
 }
-/* line 213, ../sass/style.sass */
+/* line 221, ../sass/style.sass */
 #comments .comment .comment-content {
   float: left;
   width: 86%;
 }
-/* line 216, ../sass/style.sass */
+/* line 224, ../sass/style.sass */
 #comments .comment .comment-content h3.title {
   margin: 0 0 2px;
 }
-/* line 218, ../sass/style.sass */
+/* line 226, ../sass/style.sass */
 #comments .comment .comment-content .content {
   margin-bottom: 15px;
 }
-/* line 221, ../sass/style.sass */
+/* line 229, ../sass/style.sass */
 #comments .comment .comment-content .links ul.links {
   float: left;
   margin: 0;
   font-size: 0.93em;
 }
-/* line 225, ../sass/style.sass */
+/* line 233, ../sass/style.sass */
 #comments .comment .comment-content .links ul.links li {
   padding: 0 10px 0 0;
 }
-/* line 227, ../sass/style.sass */
+/* line 235, ../sass/style.sass */
 #comments .comment .comment-content .links .comment-date {
   float: right;
   font-size: 0.83em;
   color: #888888;
   float: right;
 }
-/* line 232, ../sass/style.sass */
+/* line 240, ../sass/style.sass */
 #comments h2.comment-form {
   margin-top: 25px;
 }
 
-/* line 237, ../sass/style.sass */
+/* line 245, ../sass/style.sass */
 ul.inline li a {
   font-size: 0.93em;
 }
-/* line 241, ../sass/style.sass */
+/* line 249, ../sass/style.sass */
 ul.inline li.comment-add a {
   background: url(../images/comment-icon.png) no-repeat 0 2px;
   padding-left: 25px;
@@ -297,17 +309,17 @@ ul.inline li.comment-add a {
   display: inline-block;
   line-height: 20px;
 }
-/* line 247, ../sass/style.sass */
+/* line 255, ../sass/style.sass */
 ul.inline li.first {
   padding-left: 0;
 }
 
-/* line 252, ../sass/style.sass */
+/* line 260, ../sass/style.sass */
 .field-name-field-tags .field-item {
   display: inline;
   margin-right: 10px;
 }
-/* line 255, ../sass/style.sass */
+/* line 263, ../sass/style.sass */
 .field-name-field-tags .field-item a {
   line-height: 1.3em;
   padding: 0.1em 8px 0;
@@ -325,65 +337,65 @@ ul.inline li.first {
 /*-------------------------------- */
 /*------------- Blog ------------ */
 /*-------------------------------- */
-/* line 271, ../sass/style.sass */
+/* line 279, ../sass/style.sass */
 .page-laufblog h1, .page-termine h1 {
   color: #777777;
 }
 
-/* line 275, ../sass/style.sass */
+/* line 283, ../sass/style.sass */
 .node .field-name-field-tags {
   margin-bottom: 15px;
 }
 
-/* line 280, ../sass/style.sass */
+/* line 288, ../sass/style.sass */
 .page-laufblog #content .views-row {
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 1px dashed #aaaaaa;
 }
-/* line 284, ../sass/style.sass */
+/* line 292, ../sass/style.sass */
 .page-laufblog #content .views-row.views-row-last {
   border: none;
 }
-/* line 287, ../sass/style.sass */
+/* line 295, ../sass/style.sass */
 .page-laufblog .node .field-name-field-image {
   clear: both;
   float: left;
   margin: 5px 15px 5px 0;
 }
-/* line 291, ../sass/style.sass */
+/* line 299, ../sass/style.sass */
 .page-laufblog .node .field-name-field-tags {
   float: right;
   margin-bottom: 10px;
   font-size: 0.93em;
 }
-/* line 295, ../sass/style.sass */
+/* line 303, ../sass/style.sass */
 .page-laufblog .node .field-name-body {
   clear: right;
 }
-/* line 297, ../sass/style.sass */
+/* line 305, ../sass/style.sass */
 .page-laufblog .node .submitted {
   float: left;
 }
 
-/* line 301, ../sass/style.sass */
+/* line 309, ../sass/style.sass */
 .node-type-article h1 {
   margin-bottom: 5px;
 }
-/* line 303, ../sass/style.sass */
+/* line 311, ../sass/style.sass */
 .node-type-article .submitted {
   float: left;
   margin-top: 5px;
 }
-/* line 306, ../sass/style.sass */
+/* line 314, ../sass/style.sass */
 .node-type-article .field-name-field-tags {
   float: right;
 }
-/* line 308, ../sass/style.sass */
+/* line 316, ../sass/style.sass */
 .node-type-article .field-name-body {
   clear: both;
 }
-/* line 310, ../sass/style.sass */
+/* line 318, ../sass/style.sass */
 .node-type-article .field-name-field-blog-bildergalerie {
   *zoom: 1;
   margin-bottom: -10px;
@@ -397,7 +409,7 @@ ul.inline li.first {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 313, ../sass/style.sass */
+/* line 321, ../sass/style.sass */
 .node-type-article .field-name-field-blog-bildergalerie .field-label {
   font-size: 1.4em;
   color: #0086c4;
@@ -405,22 +417,22 @@ ul.inline li.first {
   margin-bottom: 10px;
   font-weight: normal;
 }
-/* line 319, ../sass/style.sass */
+/* line 327, ../sass/style.sass */
 .node-type-article .field-name-field-blog-bildergalerie .field-item {
   float: left;
 }
-/* line 321, ../sass/style.sass */
+/* line 329, ../sass/style.sass */
 .node-type-article .field-name-field-blog-bildergalerie .field-item img {
   margin: 0 20px 15px 0;
   border: 1px solid #dddddd;
 }
-/* line 324, ../sass/style.sass */
+/* line 332, ../sass/style.sass */
 .node-type-article #comments {
   clear: both;
 }
 
 /** Views von Artikeln, gilt für Blog und Termine ** */
-/* line 329, ../sass/style.sass */
+/* line 337, ../sass/style.sass */
 .views-row .node h2 {
   line-height: 1.3;
 }
@@ -428,33 +440,33 @@ ul.inline li.first {
 /*-------------------------------- */
 /*------- Termine Übersicht ------ */
 /*-------------------------------- */
-/* line 338, ../sass/style.sass */
+/* line 346, ../sass/style.sass */
 .page-termine #content .views-row {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px dashed #aaaaaa;
 }
-/* line 342, ../sass/style.sass */
+/* line 350, ../sass/style.sass */
 .page-termine #content .views-row.views-row-last {
   border: none;
 }
-/* line 344, ../sass/style.sass */
+/* line 352, ../sass/style.sass */
 .page-termine #content h2 {
   margin-bottom: 5px;
 }
-/* line 347, ../sass/style.sass */
+/* line 355, ../sass/style.sass */
 .page-termine #content .views-field-field-bild-termin img {
   float: left;
   margin: 5px 15px 5px 0;
 }
-/* line 350, ../sass/style.sass */
+/* line 358, ../sass/style.sass */
 .page-termine #content .views-field-field-datum {
   float: left;
   color: #e51b68;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 1.2em;
 }
-/* line 355, ../sass/style.sass */
+/* line 363, ../sass/style.sass */
 .page-termine #content .views-field-body {
   clear: left;
 }
@@ -462,7 +474,7 @@ ul.inline li.first {
 /*-------------------------------- */
 /*----- Termin Detailansicht ----- */
 /*-------------------------------- */
-/* line 364, ../sass/style.sass */
+/* line 372, ../sass/style.sass */
 .node-type-termin .group_logo_termin {
   *zoom: 1;
   display: table-cell;
@@ -477,7 +489,7 @@ ul.inline li.first {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 368, ../sass/style.sass */
+/* line 376, ../sass/style.sass */
 .node-type-termin .group_date_time {
   *zoom: 1;
   display: table-cell;
@@ -496,13 +508,13 @@ ul.inline li.first {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 376, ../sass/style.sass */
+/* line 384, ../sass/style.sass */
 .node-type-termin .field-name-field-datum {
   font-size: 1.3em;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   color: #e51b68;
 }
-/* line 380, ../sass/style.sass */
+/* line 388, ../sass/style.sass */
 .node-type-termin .field-name-field-uhrzeit {
   font-size: 1.3em;
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -512,7 +524,7 @@ ul.inline li.first {
 /*-------------------------------- */
 /*------- Wysiwyg Formate ------- */
 /*-------------------------------- */
-/* line 388, ../sass/style.sass */
+/* line 396, ../sass/style.sass */
 body.cke_show_borders {
   background: white;
 }
@@ -525,13 +537,13 @@ body.cke_show_borders {
 /*--------------------- */
 /*--- Header Desktop -- */
 /*--------------------- */
-/* line 401, ../sass/style.sass */
+/* line 409, ../sass/style.sass */
 #name-and-slogan {
   width: 545px;
   height: 110px;
   float: left;
 }
-/* line 405, ../sass/style.sass */
+/* line 413, ../sass/style.sass */
 #name-and-slogan #site-name {
   padding: 10px 10px 15px 35px;
   background: black;
@@ -545,17 +557,17 @@ body.cke_show_borders {
   width: 230px;
   height: 85px;
 }
-/* line 417, ../sass/style.sass */
+/* line 425, ../sass/style.sass */
 #name-and-slogan #site-name a {
   color: #222222;
   font-weight: normal;
   color: white;
 }
-/* line 421, ../sass/style.sass */
+/* line 429, ../sass/style.sass */
 #name-and-slogan #site-name a:hover {
   text-decoration: none;
 }
-/* line 423, ../sass/style.sass */
+/* line 431, ../sass/style.sass */
 #name-and-slogan #slogan-info-wrapper {
   float: left;
   padding-left: 20px;
@@ -566,7 +578,7 @@ body.cke_show_borders {
   border-bottom: 1px solid #e8e8e8;
   display: none;
 }
-/* line 432, ../sass/style.sass */
+/* line 440, ../sass/style.sass */
 #name-and-slogan #site-slogan {
   font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 1.2em;
@@ -576,14 +588,14 @@ body.cke_show_borders {
   color: #555555;
   width: 230px;
 }
-/* line 441, ../sass/style.sass */
+/* line 449, ../sass/style.sass */
 #name-and-slogan #header-info {
   color: #777777;
   font-size: 0.83em;
   letter-spacing: 0.03em;
 }
 
-/* line 446, ../sass/style.sass */
+/* line 454, ../sass/style.sass */
 #header-image {
   background: url(../images/header-image-subpages.jpg) no-repeat right top;
   background: url("../images/laeufer-gross.jpg") no-repeat scroll left -20px transparent;
@@ -598,12 +610,12 @@ body.cke_show_borders {
 /*--------------------------- */
 /*------- Startseite -------- */
 /*--------------------------- */
-/* line 461, ../sass/style.sass */
+/* line 469, ../sass/style.sass */
 .front #name-and-slogan {
   width: 20%;
   height: 220px;
 }
-/* line 464, ../sass/style.sass */
+/* line 472, ../sass/style.sass */
 .front #name-and-slogan #site-name {
   padding: 10px 10px 15px 35px;
   font-size: 50px;
@@ -615,7 +627,7 @@ body.cke_show_borders {
   width: 277px;
   height: 120px;
 }
-/* line 474, ../sass/style.sass */
+/* line 482, ../sass/style.sass */
 .front #name-and-slogan #slogan-info-wrapper {
   padding-top: 0;
   display: block;
@@ -623,7 +635,7 @@ body.cke_show_borders {
   padding-left: 0;
   border: 0;
 }
-/* line 480, ../sass/style.sass */
+/* line 488, ../sass/style.sass */
 .front #name-and-slogan #site-slogan {
   padding-left: 35px;
   width: 250px;
@@ -634,7 +646,7 @@ body.cke_show_borders {
   margin-bottom: 8px;
   color: #333333;
 }
-/* line 489, ../sass/style.sass */
+/* line 497, ../sass/style.sass */
 .front #name-and-slogan #header-info {
   clear: left;
   padding-left: 35px;
@@ -643,12 +655,12 @@ body.cke_show_borders {
   color: #888888;
 }
 
-/* line 499, ../sass/style.sass */
+/* line 507, ../sass/style.sass */
 .front #header {
   height: 328px;
   margin-right: -35px;
 }
-/* line 502, ../sass/style.sass */
+/* line 510, ../sass/style.sass */
 .front #header-image {
   position: relative;
   background: url(../images/header-laeufer.jpg) no-repeat right bottom;
@@ -657,15 +669,15 @@ body.cke_show_borders {
   float: right;
   border-left: 0;
 }
-/* line 509, ../sass/style.sass */
+/* line 517, ../sass/style.sass */
 .front .header-bottom-left-inner {
   width: 34px;
 }
-/* line 511, ../sass/style.sass */
+/* line 519, ../sass/style.sass */
 .front #main {
   padding-top: 0;
 }
-/* line 513, ../sass/style.sass */
+/* line 521, ../sass/style.sass */
 .front .field-name-title, .front .field-name-body {
   *zoom: 1;
 }
@@ -678,7 +690,7 @@ body.cke_show_borders {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 515, ../sass/style.sass */
+/* line 523, ../sass/style.sass */
 .front h1 {
   width: 66.31579%;
   float: left;
@@ -694,7 +706,7 @@ body.cke_show_borders {
   padding-left: 35px;
   background: whitesmoke;
 }
-/* line 526, ../sass/style.sass */
+/* line 534, ../sass/style.sass */
 .front .front-left {
   width: 66.31579%;
   float: left;
@@ -706,16 +718,16 @@ body.cke_show_borders {
   height: 199px;
   border-bottom: 1px solid #eaeaea;
 }
-/* line 533, ../sass/style.sass */
+/* line 541, ../sass/style.sass */
 .front .front-left p {
   padding-right: 20px;
 }
-/* line 535, ../sass/style.sass */
+/* line 543, ../sass/style.sass */
 .front h1, .front .front-left {
   margin-right: 0;
   padding-right: 2px;
 }
-/* line 538, ../sass/style.sass */
+/* line 546, ../sass/style.sass */
 .front #page-bottom {
   *zoom: 1;
   background: #f1f1f1;
@@ -735,14 +747,14 @@ body.cke_show_borders {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 547, ../sass/style.sass */
+/* line 555, ../sass/style.sass */
 .front #page-bottom #block-views-blog-block-1 {
   width: 49.47368%;
   float: left;
   margin-right: 1.05263%;
   display: inline;
 }
-/* line 549, ../sass/style.sass */
+/* line 557, ../sass/style.sass */
 .front #page-bottom #block-views-termine-block-1 {
   width: 49.47368%;
   float: right;
@@ -750,11 +762,11 @@ body.cke_show_borders {
   #margin-left: -10px;
   display: inline;
 }
-/* line 551, ../sass/style.sass */
+/* line 559, ../sass/style.sass */
 .front #page-bottom #block-views-termine-block-1 h2 {
   margin-left: 15px;
 }
-/* line 554, ../sass/style.sass */
+/* line 562, ../sass/style.sass */
 .front #page-bottom .block h2 {
   font-size: 1.5em;
   color: #555555;
@@ -763,13 +775,13 @@ body.cke_show_borders {
   background: url("../images/square-bullet-black.png") no-repeat 0 center;
   padding-left: 20px;
 }
-/* line 562, ../sass/style.sass */
+/* line 570, ../sass/style.sass */
 .front #page-bottom .block h3 {
   margin-top: 5px;
   margin-bottom: 1px;
   font-size: 1.1em;
 }
-/* line 566, ../sass/style.sass */
+/* line 574, ../sass/style.sass */
 .front #page-bottom .block .views-row {
   margin-bottom: 8px;
   *zoom: 1;
@@ -783,31 +795,31 @@ body.cke_show_borders {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 569, ../sass/style.sass */
+/* line 577, ../sass/style.sass */
 .front #page-bottom .block .views-field-body {
   line-height: 1.3;
 }
-/* line 571, ../sass/style.sass */
+/* line 579, ../sass/style.sass */
 .front #page-bottom .block .view-blog {
   border-right: 1px solid #cccccc;
   padding-right: 15px;
   margin-top: -20px;
   padding-top: 20px;
 }
-/* line 576, ../sass/style.sass */
+/* line 584, ../sass/style.sass */
 .front #page-bottom .block .views-field-field-image {
   float: left;
 }
-/* line 578, ../sass/style.sass */
+/* line 586, ../sass/style.sass */
 .front #page-bottom .block img {
   margin: 4px 15px 0 1px;
   border: 1px solid #dddddd;
 }
-/* line 581, ../sass/style.sass */
+/* line 589, ../sass/style.sass */
 .front #page-bottom .block .view-termine {
   padding-left: 15px;
 }
-/* line 583, ../sass/style.sass */
+/* line 591, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-row {
   *zoom: 1;
 }
@@ -820,35 +832,35 @@ body.cke_show_borders {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 585, ../sass/style.sass */
+/* line 593, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-field-bild-termin {
   float: left;
 }
-/* line 587, ../sass/style.sass */
+/* line 595, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-field-bild-termin img {
   margin-right: 15px;
   margin-left: 1px;
   margin-top: 3px;
 }
-/* line 592, ../sass/style.sass */
+/* line 600, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-field-bild-termin img {
   margin-top: 4px;
 }
-/* line 594, ../sass/style.sass */
+/* line 602, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-field-datum {
   color: black;
   padding-right: 10px;
 }
-/* line 597, ../sass/style.sass */
+/* line 605, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-body {
   display: inline;
 }
-/* line 599, ../sass/style.sass */
+/* line 607, ../sass/style.sass */
 .front #page-bottom .block .view-termine .views-field-body p {
   margin: 0;
   display: inline;
 }
-/* line 603, ../sass/style.sass */
+/* line 611, ../sass/style.sass */
 .front .front-right {
   width: 32.63158%;
   float: right;
@@ -862,21 +874,21 @@ body.cke_show_borders {
   height: 260px;
   padding-left: 3px;
 }
-/* line 611, ../sass/style.sass */
+/* line 619, ../sass/style.sass */
 .front .front-right h2 {
   margin-top: 0;
   padding-top: 30px;
 }
-/* line 614, ../sass/style.sass */
+/* line 622, ../sass/style.sass */
 .front .front-right h2, .front .front-right p {
   padding-left: 25px;
 }
-/* line 617, ../sass/style.sass */
+/* line 625, ../sass/style.sass */
 .front .front-middle {
   clear: left;
   padding-top: 22px;
 }
-/* line 620, ../sass/style.sass */
+/* line 628, ../sass/style.sass */
 .front .front-middle h3.strecke {
   background: url("../images/square-bullet-magenta.png") no-repeat scroll 0 5px transparent;
   color: #e51b68;
@@ -885,73 +897,73 @@ body.cke_show_borders {
   padding-left: 20px;
   font-size: 17px;
 }
-/* line 627, ../sass/style.sass */
+/* line 635, ../sass/style.sass */
 .front .front-middle div.media-element.file-mittel {
   height: auto !important;
   width: auto !important;
 }
-/* line 630, ../sass/style.sass */
+/* line 638, ../sass/style.sass */
 .front .front-middle div.media-element.file-mittel a {
   display: block;
 }
-/* line 632, ../sass/style.sass */
+/* line 640, ../sass/style.sass */
 .front .front-middle img {
   padding: 8px;
   border: 1px solid #cccccc;
 }
-/* line 635, ../sass/style.sass */
+/* line 643, ../sass/style.sass */
 .front .front-middle p.description-top {
   margin: 5px 0 10px;
   padding-left: 20px;
   color: #999999;
   font-size: 0.93em;
 }
-/* line 640, ../sass/style.sass */
+/* line 648, ../sass/style.sass */
 .front .front-middle p.description-bottom {
   margin: 2px 0 10px;
   padding-left: 2px;
   color: #999999;
   font-size: 0.93em;
 }
-/* line 646, ../sass/style.sass */
+/* line 654, ../sass/style.sass */
 .front .middle-left, .front .middle-middle, .front .middle-right {
   float: left;
   width: 29%;
 }
-/* line 649, ../sass/style.sass */
+/* line 657, ../sass/style.sass */
 .front .middle-left {
   padding-right: 2.6%;
 }
-/* line 651, ../sass/style.sass */
+/* line 659, ../sass/style.sass */
 .front .middle-middle {
   padding: 0px 2.6%;
 }
-/* line 653, ../sass/style.sass */
+/* line 661, ../sass/style.sass */
 .front .middle-right {
   padding-left: 2.6%;
 }
 
-/* line 656, ../sass/style.sass */
+/* line 664, ../sass/style.sass */
 #header {
   position: relative;
   margin: 0 -35px;
 }
-/* line 659, ../sass/style.sass */
+/* line 667, ../sass/style.sass */
 #header ul#main-menu {
   float: left;
   margin: 0;
   width: 620px;
 }
-/* line 663, ../sass/style.sass */
+/* line 671, ../sass/style.sass */
 #header ul#main-menu li {
   float: left;
   padding: 0;
 }
-/* line 667, ../sass/style.sass */
+/* line 675, ../sass/style.sass */
 #header ul#main-menu li.first a {
   padding-left: 10px;
 }
-/* line 669, ../sass/style.sass */
+/* line 677, ../sass/style.sass */
 #header ul#main-menu li a {
   color: #edf6f9;
   text-transform: uppercase;
@@ -960,13 +972,13 @@ body.cke_show_borders {
   display: inline-block;
   padding: 3px 14px 0;
 }
-/* line 677, ../sass/style.sass */
+/* line 685, ../sass/style.sass */
 #header ul#main-menu li.active a, #header ul#main-menu li.active-trail a {
   background: #e51b68;
   color: white;
 }
 
-/* line 681, ../sass/style.sass */
+/* line 689, ../sass/style.sass */
 #header-bottom {
   height: 32px;
   background: black;
@@ -974,7 +986,7 @@ body.cke_show_borders {
   clear: both;
 }
 
-/* line 687, ../sass/style.sass */
+/* line 695, ../sass/style.sass */
 #header-bottom-left {
   height: 100%;
   width: 670px;
@@ -982,7 +994,7 @@ body.cke_show_borders {
   float: left;
 }
 
-/* line 693, ../sass/style.sass */
+/* line 701, ../sass/style.sass */
 .header-bottom-left-inner {
   float: left;
   height: 100%;
@@ -990,18 +1002,18 @@ body.cke_show_borders {
   background: #009bdd;
 }
 
-/* line 700, ../sass/style.sass */
+/* line 708, ../sass/style.sass */
 .sidebar-second #page #content {
   width: 74.73684%;
   float: left;
   margin-right: 1.05263%;
   display: inline;
 }
-/* line 702, ../sass/style.sass */
+/* line 710, ../sass/style.sass */
 .sidebar-second #page #content .section {
   padding-right: 50px;
 }
-/* line 704, ../sass/style.sass */
+/* line 712, ../sass/style.sass */
 .sidebar-second #page #sidebar-second {
   width: 24.21053%;
   float: right;
@@ -1009,7 +1021,7 @@ body.cke_show_borders {
   #margin-left: -10px;
   display: inline;
 }
-/* line 706, ../sass/style.sass */
+/* line 714, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section {
   border-left: 1px dashed #cccccc;
   margin-left: -20px;
@@ -1022,71 +1034,71 @@ body.cke_show_borders {
   background: whitesmoke;
   color: #818181;
 }
-/* line 717, ../sass/style.sass */
+/* line 725, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .views-row {
   margin-bottom: 10px;
 }
-/* line 719, ../sass/style.sass */
+/* line 727, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section h2 {
   color: black;
   line-height: 1.2;
   margin-bottom: 10px;
   font-size: 1.7em;
 }
-/* line 725, ../sass/style.sass */
+/* line 733, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .views-field-title h3 {
   margin-bottom: 3px;
   font-size: 1.2em;
   text-transform: none;
   line-height: 1.3;
 }
-/* line 730, ../sass/style.sass */
+/* line 738, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .views-field-title h3 a {
   color: #e51b68;
 }
-/* line 734, ../sass/style.sass */
+/* line 742, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .view-blog .views-field-title h3 {
   font-size: 1.2em;
 }
-/* line 736, ../sass/style.sass */
+/* line 744, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .views-field-field-datum {
   color: #333333;
   margin-bottom: 2px;
   font-size: 0.93em;
 }
-/* line 740, ../sass/style.sass */
+/* line 748, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .views-field-body {
   margin-bottom: 2px;
 }
-/* line 742, ../sass/style.sass */
+/* line 750, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section p {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 745, ../sass/style.sass */
+/* line 753, ../sass/style.sass */
 .sidebar-second #page #sidebar-second .section .views-field-view-node {
   font-size: 0.83em;
   white-space: nowrap;
 }
 
-/* line 750, ../sass/style.sass */
+/* line 758, ../sass/style.sass */
 .node-type-termin .field-name-field-bild-termin {
   float: left;
   margin-right: 20px;
 }
-/* line 753, ../sass/style.sass */
+/* line 761, ../sass/style.sass */
 .node-type-termin .field-name-field-datum {
   float: left;
 }
-/* line 755, ../sass/style.sass */
+/* line 763, ../sass/style.sass */
 .node-type-termin .field-name-field-uhrzeit {
   float: left;
 }
-/* line 758, ../sass/style.sass */
+/* line 766, ../sass/style.sass */
 .node-type-termin .field-name-body {
   clear: left;
 }
-/* line 760, ../sass/style.sass */
+/* line 768, ../sass/style.sass */
 .node-type-termin .field-name-field-link-veranst-website {
   margin-top: 10px;
 }
