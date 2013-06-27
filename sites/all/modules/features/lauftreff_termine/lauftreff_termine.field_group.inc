@@ -53,7 +53,7 @@ function lauftreff_termine_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Logo und Termin',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'field_bild_termin',
       1 => 'group_date_time',
