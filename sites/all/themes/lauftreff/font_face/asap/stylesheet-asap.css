@@ -5,10 +5,10 @@
 @font-face {
     font-family: 'AsapRegular';
     src: url('Asap-Regular-webfont.eot');
-    src: url('Asap-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('Asap-Regular-webfont.svg#AsapRegular') format('svg'),
+        url('Asap-Regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('Asap-Regular-webfont.woff') format('woff'),
-         url('Asap-Regular-webfont.ttf') format('truetype'),
-         url('Asap-Regular-webfont.svg#AsapRegular') format('svg');
+         url('Asap-Regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -17,10 +17,11 @@
 @font-face {
     font-family: 'AsapItalic';
     src: url('Asap-Italic-webfont.eot');
-    src: url('Asap-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('Asap-Italic-webfont.svg#AsapItalic') format('svg'),
+         url('Asap-Italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('Asap-Italic-webfont.woff') format('woff'),
-         url('Asap-Italic-webfont.ttf') format('truetype'),
-         url('Asap-Italic-webfont.svg#AsapItalic') format('svg');
+         url('Asap-Italic-webfont.ttf') format('truetype');
+         
     font-weight: normal;
     font-style: normal;
 
@@ -29,10 +30,11 @@
 @font-face {
     font-family: 'AsapBold';
     src: url('Asap-Bold-webfont.eot');
-    src: url('Asap-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('Asap-Bold-webfont.svg#AsapBold') format('svg'),
+         url('Asap-Bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('Asap-Bold-webfont.woff') format('woff'),
-         url('Asap-Bold-webfont.ttf') format('truetype'),
-         url('Asap-Bold-webfont.svg#AsapBold') format('svg');
+         url('Asap-Bold-webfont.ttf') format('truetype');
+         
     font-weight: normal;
     font-style: normal;
 
@@ -41,10 +43,11 @@
 @font-face {
     font-family: 'AsapBoldItalic';
     src: url('Asap-BoldItalic-webfont.eot');
-    src: url('Asap-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('Asap-BoldItalic-webfont.svg#AsapBoldItalic') format('svg'),
+         url('Asap-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('Asap-BoldItalic-webfont.woff') format('woff'),
-         url('Asap-BoldItalic-webfont.ttf') format('truetype'),
-         url('Asap-BoldItalic-webfont.svg#AsapBoldItalic') format('svg');
+         url('Asap-BoldItalic-webfont.ttf') format('truetype');
+         
     font-weight: normal;
     font-style: normal;
 
