@@ -25,7 +25,6 @@ features[field][] = node-termin-body
 features[field][] = node-termin-field_bild_termin
 features[field][] = node-termin-field_dateianhang
 features[field][] = node-termin-field_datum
-features[field][] = node-termin-field_ist_der_termin_aktuell_
 features[field][] = node-termin-field_link_veranst_website
 features[field][] = node-termin-field_uhrzeit
 features[field_group][] = group_date_time|node|termin|default
