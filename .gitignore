@@ -9,3 +9,5 @@ sites/*/private
 *.sassc
 *.sublime-workspace
 *.sublime-project
+
+run.exe.stackdump
