@@ -10,4 +10,6 @@ sites/*/private
 *.sublime-workspace
 *.sublime-project
 
-run.exe.stackdump
+*.exe.stackdump
+
+.idea/
