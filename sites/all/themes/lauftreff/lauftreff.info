@@ -7,6 +7,8 @@ stylesheets[all][] = font_face/asap/stylesheet-asap.css
 stylesheets[all][] = font_face/arvo/stylesheet-arvo.css
 stylesheets[all][] = css/style.css
 
+scripts[] = js/lauftreff.js
+
 regions[header] = Header
 regions[header_info] = Header Info
 regions[help] = Help
