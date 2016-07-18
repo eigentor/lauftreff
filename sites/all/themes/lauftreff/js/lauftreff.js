@@ -4,8 +4,7 @@
   Drupal.behaviors.lauftreff = {
     attach: function (context, settings) {
       var height_left = $('.front .front-left').outerHeight(true) + $('.front h1#page-title').outerHeight(true);
-      console.log(height_left);
-      $('.front .front-right').outerHeight(height_left);
+      $('.front .front-right').height(height_left);
 
     } // end of attach function
   };
