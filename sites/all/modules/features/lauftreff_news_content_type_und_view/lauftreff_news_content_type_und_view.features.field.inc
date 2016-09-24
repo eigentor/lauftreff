@@ -50,7 +50,7 @@ function lauftreff_news_content_type_und_view_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -127,10 +127,12 @@ function lauftreff_news_content_type_und_view_field_default_fields() {
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
             'colorbox_image_style' => '',
+            'colorbox_multivalue_index' => NULL,
             'colorbox_node_style' => 'bildergalerie_thumbnail',
+            'colorbox_node_style_first' => '',
           ),
           'type' => 'colorbox',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -227,7 +229,7 @@ function lauftreff_news_content_type_und_view_field_default_fields() {
             'image_style' => 'blog_main_image',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -329,7 +331,7 @@ function lauftreff_news_content_type_und_view_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',

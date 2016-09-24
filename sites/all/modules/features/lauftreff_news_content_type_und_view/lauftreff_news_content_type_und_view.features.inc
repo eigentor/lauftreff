@@ -51,11 +51,13 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'bildergalerie_thumbnail',
   );
 
   // Exported image style: blog_main_image.
   $styles['blog_main_image'] = array(
     'name' => 'blog_main_image',
+    'label' => 'blog_main_image',
     'effects' => array(
       4 => array(
         'label' => 'Skalierung',
@@ -79,6 +81,7 @@ function lauftreff_news_content_type_und_view_image_default_styles() {
   // Exported image style: news_thumbnail.
   $styles['news_thumbnail'] = array(
     'name' => 'news_thumbnail',
+    'label' => 'news_thumbnail',
     'effects' => array(
       6 => array(
         'label' => 'Skalierung',
