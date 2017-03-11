@@ -48,8 +48,8 @@ body {
 /* line 42, ../sass/style.sass */
 #page {
   *zoom: 1;
-  max-width: 950px;
-  _width: 950px;
+  /*max-width: 950px;*/
+  width: 950px;
   padding-left: 35px;
   padding-right: 35px;
   margin-left: auto;
