@@ -1,0 +1,12 @@
+.field-name-field-blog-bildergalerie:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.node-type-article .submitted,
+.node-type-article .field-name-submitted-by {
+  float: none;
+}

@@ -6,6 +6,7 @@ core = 7.x
 stylesheets[all][] = font_face/asap/stylesheet-asap.css
 stylesheets[all][] = font_face/arvo/stylesheet-arvo.css
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/style-new.css
 
 scripts[] = js/lauftreff.js
 
