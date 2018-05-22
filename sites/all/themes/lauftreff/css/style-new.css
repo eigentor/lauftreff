@@ -10,3 +10,9 @@
 .node-type-article .field-name-submitted-by {
   float: none;
 }
+#header-bottom-left {
+  width: 100%;
+}
+#header ul#main-menu {
+  width: auto;
+}
