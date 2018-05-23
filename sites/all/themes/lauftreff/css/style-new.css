@@ -10,7 +10,31 @@
 .node-type-article .field-name-submitted-by {
   float: none;
 }
-#header-bottom-left {
+
+/** Cookie Banner **/
+#sliding-popup.sliding-popup-bottom {
+  background: #333;
+}
+#sliding-popup .popup-content #popup-text p {
+  font-weight: normal;
+  margin-top: 0.8em;
+}
+#sliding-popup .popup-content #popup-text a {
+  color: #44aad6;
+}
+#sliding-popup .popup-content #popup-buttons {
+  margin-top: 0.5em;
+}
+#sliding-popup .popup-content #popup-buttons button {
+  text-shadow: none;
+  box-shadow: none;
+  background: #0086c4;
+  color: white;
+  border: none;
+}
+#sliding-popup .popup-content #popup-buttons button:hover {
+  background: #44aad6;
+}#header-bottom-left {
   width: 100%;
 }
 #header ul#main-menu {
