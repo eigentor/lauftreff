@@ -1,0 +1,418 @@
+diff --git a/includes/database/mysql/database.inc b/includes/database/mysql/database.inc
+index 356e039..24b7d28 100644
+--- a/includes/database/mysql/database.inc
++++ b/includes/database/mysql/database.inc
+@@ -19,6 +19,277 @@ class DatabaseConnection_mysql extends DatabaseConnection {
+    */
+   protected $needsCleanup = FALSE;
+ 
++  /**
++   * The list of MySQL reserved key words.
++   *
++   * @link https://dev.mysql.com/doc/refman/8.0/en/keywords.html
++   */
++  private $reservedKeyWords = [
++    'accessible',
++    'add',
++    'admin',
++    'all',
++    'alter',
++    'analyze',
++    'and',
++    'as',
++    'asc',
++    'asensitive',
++    'before',
++    'between',
++    'bigint',
++    'binary',
++    'blob',
++    'both',
++    'by',
++    'call',
++    'cascade',
++    'case',
++    'change',
++    'char',
++    'character',
++    'check',
++    'collate',
++    'column',
++    'condition',
++    'constraint',
++    'continue',
++    'convert',
++    'create',
++    'cross',
++    'cube',
++    'cume_dist',
++    'current_date',
++    'current_time',
++    'current_timestamp',
++    'current_user',
++    'cursor',
++    'database',
++    'databases',
++    'day_hour',
++    'day_microsecond',
++    'day_minute',
++    'day_second',
++    'dec',
++    'decimal',
++    'declare',
++    'default',
++    'delayed',
++    'delete',
++    'dense_rank',
++    'desc',
++    'describe',
++    'deterministic',
++    'distinct',
++    'distinctrow',
++    'div',
++    'double',
++    'drop',
++    'dual',
++    'each',
++    'else',
++    'elseif',
++    'empty',
++    'enclosed',
++    'escaped',
++    'except',
++    'exists',
++    'exit',
++    'explain',
++    'false',
++    'fetch',
++    'first_value',
++    'float',
++    'float4',
++    'float8',
++    'for',
++    'force',
++    'foreign',
++    'from',
++    'fulltext',
++    'function',
++    'generated',
++    'get',
++    'grant',
++    'group',
++    'grouping',
++    'groups',
++    'having',
++    'high_priority',
++    'hour_microsecond',
++    'hour_minute',
++    'hour_second',
++    'if',
++    'ignore',
++    'in',
++    'index',
++    'infile',
++    'inner',
++    'inout',
++    'insensitive',
++    'insert',
++    'int',
++    'int1',
++    'int2',
++    'int3',
++    'int4',
++    'int8',
++    'integer',
++    'interval',
++    'into',
++    'io_after_gtids',
++    'io_before_gtids',
++    'is',
++    'iterate',
++    'join',
++    'json_table',
++    'key',
++    'keys',
++    'kill',
++    'lag',
++    'last_value',
++    'lead',
++    'leading',
++    'leave',
++    'left',
++    'like',
++    'limit',
++    'linear',
++    'lines',
++    'load',
++    'localtime',
++    'localtimestamp',
++    'lock',
++    'long',
++    'longblob',
++    'longtext',
++    'loop',
++    'low_priority',
++    'master_bind',
++    'master_ssl_verify_server_cert',
++    'match',
++    'maxvalue',
++    'mediumblob',
++    'mediumint',
++    'mediumtext',
++    'middleint',
++    'minute_microsecond',
++    'minute_second',
++    'mod',
++    'modifies',
++    'natural',
++    'not',
++    'no_write_to_binlog',
++    'nth_value',
++    'ntile',
++    'null',
++    'numeric',
++    'of',
++    'on',
++    'optimize',
++    'optimizer_costs',
++    'option',
++    'optionally',
++    'or',
++    'order',
++    'out',
++    'outer',
++    'outfile',
++    'over',
++    'partition',
++    'percent_rank',
++    'persist',
++    'persist_only',
++    'precision',
++    'primary',
++    'procedure',
++    'purge',
++    'range',
++    'rank',
++    'read',
++    'reads',
++    'read_write',
++    'real',
++    'recursive',
++    'references',
++    'regexp',
++    'release',
++    'rename',
++    'repeat',
++    'replace',
++    'require',
++    'resignal',
++    'restrict',
++    'return',
++    'revoke',
++    'right',
++    'rlike',
++    'row',
++    'rows',
++    'row_number',
++    'schema',
++    'schemas',
++    'second_microsecond',
++    'select',
++    'sensitive',
++    'separator',
++    'set',
++    'show',
++    'signal',
++    'smallint',
++    'spatial',
++    'specific',
++    'sql',
++    'sqlexception',
++    'sqlstate',
++    'sqlwarning',
++    'sql_big_result',
++    'sql_calc_found_rows',
++    'sql_small_result',
++    'ssl',
++    'starting',
++    'stored',
++    'straight_join',
++    'system',
++    'table',
++    'terminated',
++    'then',
++    'tinyblob',
++    'tinyint',
++    'tinytext',
++    'to',
++    'trailing',
++    'trigger',
++    'true',
++    'undo',
++    'union',
++    'unique',
++    'unlock',
++    'unsigned',
++    'update',
++    'usage',
++    'use',
++    'using',
++    'utc_date',
++    'utc_time',
++    'utc_timestamp',
++    'values',
++    'varbinary',
++    'varchar',
++    'varcharacter',
++    'varying',
++    'virtual',
++    'when',
++    'where',
++    'while',
++    'window',
++    'with',
++    'write',
++    'xor',
++    'year_month',
++    'zerofill',
++  ];
++
+   public function __construct(array $connection_options = array()) {
+     // This driver defaults to transaction support, except if explicitly passed FALSE.
+     $this->transactionSupport = !isset($connection_options['transactions']) || ($connection_options['transactions'] !== FALSE);
+@@ -86,21 +357,88 @@ public function __construct(array $connection_options = array()) {
+     $connection_options += array(
+       'init_commands' => array(),
+     );
++
+     $connection_options['init_commands'] += array(
+-      'sql_mode' => "SET sql_mode = 'REAL_AS_FLOAT,PIPES_AS_CONCAT,ANSI_QUOTES,IGNORE_SPACE,STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER'",
++      'sql_mode' => "SET sql_mode = 'REAL_AS_FLOAT,PIPES_AS_CONCAT,ANSI_QUOTES,IGNORE_SPACE,STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO'",
+     );
++
+     // Execute initial commands.
+     foreach ($connection_options['init_commands'] as $sql) {
+       $this->exec($sql);
+     }
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function prefixTables($sql) {
++    // Escape reserved mysql keywords used as table names.
++    $sql = array_reduce($this->reservedKeyWords, function ($original_sql, $keyword) {
++      return str_replace('{' . $keyword . '}', '`{' . $keyword . '}`', $original_sql);
++    }, $sql);
++    return parent::prefixTables($sql);
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function escapeField($field) {
++    $field = parent::escapeField($field);
++    return $this->quoteIdentifier($field);
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function escapeAlias($field) {
++    // Quote fields so that MySQL reserved words like 'function' can be used
++    // as aliases.
++    $field = parent::escapeAlias($field);
++    return $this->quoteIdentifier($field);
++  }
++
++  /**
++   * Quotes an identifier if it matches a MySQL reserved keyword.
++   *
++   * @param string $identifier
++   *   The field to check.
++   *
++   * @return string
++   *   The identifier, quoted if it matches a MySQL reserved keyword.
++   */
++  private function quoteIdentifier($identifier) {
++    // Quote identifiers so that MySQL reserved words like 'function' can be
++    // used as column names. Sometimes the 'table.column_name' format is passed
++    // in. For example,
++    // \Drupal\Core\Entity\Sql\SqlContentEntityStorage::buildQuery() adds a
++    // condition on "base.uid" while loading user entities.
++    if (strpos($identifier, '.') !== FALSE) {
++      list($table, $identifier) = explode('.', $identifier, 2);
++    }
++    if (in_array(strtolower($identifier), $this->reservedKeyWords, TRUE)) {
++      // Quote the string for MySQL reserved keywords.
++      $identifier = '"' . $identifier . '"';
++    }
++    return isset($table) ? $table . '.' . $identifier : $identifier;
++  }
++
+   public function __destruct() {
+     if ($this->needsCleanup) {
+       $this->nextIdDelete();
+     }
+   }
+ 
++  public function query($query, array $args = array(), $options = array()) {
++    $query = preg_replace('/{([^}]+)}/', '`\1`', $query);
++    // This to make Drush work
++    $query = strtr($query, array(
++      ' system.' => ' `system`.',
++      '`system` system' => '`system` `system`',
++    ));
++
++    return parent::query($query, $args, $options);
++  }
++
+   public function queryRange($query, $from, $count, array $args = array(), array $options = array()) {
+     return $this->query($query . ' LIMIT ' . (int) $from . ', ' . (int) $count, $args, $options);
+   }
+diff --git a/includes/database/mysql/query.inc b/includes/database/mysql/query.inc
+index d3d2d9e..0e4f4b7 100644
+--- a/includes/database/mysql/query.inc
++++ b/includes/database/mysql/query.inc
+@@ -48,6 +48,10 @@ public function __toString() {
+     // Default fields are always placed first for consistency.
+     $insert_fields = array_merge($this->defaultFields, $this->insertFields);
+ 
++    $insert_fields = array_map(function ($field) {
++      return $this->connection->escapeField($field);
++    }, $insert_fields);
++
+     // If we're selecting from a SelectQuery, finish building the query and
+     // pass it back, as any remaining options are irrelevant.
+     if (!empty($this->fromQuery)) {
+diff --git a/includes/database/mysql/schema.inc b/includes/database/mysql/schema.inc
+index 9ba1c73..65c1797 100644
+--- a/includes/database/mysql/schema.inc
++++ b/includes/database/mysql/schema.inc
+@@ -494,11 +494,11 @@ public function getComment($table, $column = NULL) {
+       $condition->condition('column_name', $column);
+       $condition->compile($this->connection, $this);
+       // Don't use {} around information_schema.columns table.
+-      return $this->connection->query("SELECT column_comment FROM information_schema.columns WHERE " . (string) $condition, $condition->arguments())->fetchField();
++      return $this->connection->query("SELECT column_comment as column_comment FROM information_schema.columns WHERE " . (string) $condition, $condition->arguments())->fetchField();
+     }
+     $condition->compile($this->connection, $this);
+     // Don't use {} around information_schema.tables table.
+-    $comment = $this->connection->query("SELECT table_comment FROM information_schema.tables WHERE " . (string) $condition, $condition->arguments())->fetchField();
++    $comment = $this->connection->query("SELECT table_comment as table_comment FROM information_schema.tables WHERE " . (string) $condition, $condition->arguments())->fetchField();
+     // Work-around for MySQL 5.0 bug http://bugs.mysql.com/bug.php?id=11379
+     return preg_replace('/; InnoDB free:.*$/', '', $comment);
+   }
+diff --git a/includes/database/schema.inc b/includes/database/schema.inc
+index 31862db..1ce4bb2 100644
+--- a/includes/database/schema.inc
++++ b/includes/database/schema.inc
+@@ -343,7 +343,7 @@ public function findTables($table_expression) {
+     // couldn't use db_select() here because it would prefix
+     // information_schema.tables and the query would fail.
+     // Don't use {} around information_schema.tables table.
+-    return $this->connection->query("SELECT table_name FROM information_schema.tables WHERE " . (string) $condition, $condition->arguments())->fetchAllKeyed(0, 0);
++    return $this->connection->query("SELECT table_name as table_name FROM information_schema.tables WHERE " . (string) $condition, $condition->arguments())->fetchAllKeyed(0, 0);
+   }
+ 
+   /**
