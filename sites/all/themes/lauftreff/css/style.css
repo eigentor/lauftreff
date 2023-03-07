@@ -1,18 +1,928 @@
-/* Error: expected "{".
- *   ,
- * 8 |   ::after 
- *   |           ^
- *   '
- *   sass/includes/_mixins.scss 8:11  @import
- *   sass/style.sass 5:9              root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 8 \2502    ::after \a   \2502            ^\a   \2575 \a   sass/includes/_mixins.scss 8:11  @import\a   sass/style.sass 5:9              root stylesheet';
+@charset "UTF-8";
+@import "../font_face/asap/stylesheet-asap.css";
+@import "../font_face/arvo/stylesheet-arvo.css";
+.imagefloatleft {
+  float: left;
+  margin: 5px 15px 10px 0;
 }
+
+.imagefloatright {
+  float: left;
+  margin: 5px 0 10px 15px;
+}
+
+/*--------------------------------*/
+/*---------- Reset Styles --------*/
+/*--------------------------------*/
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*--------------------------------*/
+/*------------ Layout ------------*/
+/*--------------------------------*/
+body {
+  background: #d8d8d8 url(../images/body-bg-aces.png);
+  background: #d8d8d8 url(../images/lgrey008.png);
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 20px 0 30px;
+}
+
+#page {
+  width: 960px;
+  background: white;
+  box-shadow: 0px 2px 6px #999;
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color="#bbbbbb", Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color="#bbbbbb", Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color="#bbbbbb", Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color="#bbbbbb", Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color="#cccccc", Direction=305, Strength=3);
+}
+
+.front #header-bottom {
+  border: 0;
+}
+
+#logo {
+  width: 20%;
+  float: left;
+  display: none;
+}
+
+a#logo {
+  float: left;
+  padding-top: 7px;
+}
+
+#main {
+  padding-top: 30px;
+}
+
+#content {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+}
+#content ::before,
+#content ::after {
+  content: " ";
+  display: table;
+}
+#content ::after {
+  clear: both;
+}
+#content a.feed-icon {
+  display: none;
+}
+#content .region-content {
+  padding: 0 0 25px;
+}
+
+#footer {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  background: none repeat scroll 0 0 #000;
+  color: #888;
+  font-size: 0.83em;
+  padding: 9px 35px 11px;
+  margin: 0 -35px;
+}
+#footer ::before,
+#footer ::after {
+  content: " ";
+  display: table;
+}
+#footer ::after {
+  clear: both;
+}
+#footer p {
+  margin: 0;
+}
+#footer #footer-right {
+  text-align: right;
+}
+
+/*--------------------------------*/
+/*---- Fonts, Micro-Elements -----*/
+/*--------------------------------*/
+body {
+  font: 13px/1.5 "AsapRegular", verdana, arial, helvetica, sans-serif;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  color: #0086C4;
+  font-weight: normal;
+  margin: 7px 0 10px;
+}
+
+h1 {
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.sidebar h2 {
+  text-transform: none;
+  line-height: 1.2;
+}
+
+.comment h3.title,
+.sidebar .view-blog h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/** Links, Taxonomy etc **/
+a {
+  color: #0086C4;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+p {
+  margin: 10px 0 11px;
+}
+
+.imagefloatleft {
+  float: left;
+  margin: 3px 15px 5px 0;
+}
+
+.imagefloatright {
+  float: right;
+  margin: 3px 0 5px 15px;
+}
+
+.image-center {
+  display: block;
+  margin: auto;
+}
+
+/*--------------------------------*/
+/* Drupal-specific Micro-Elements */
+/*--------------------------------*/
+ul.action-links {
+  padding-left: 3px;
+}
+ul.action-links li {
+  list-style: none;
+  list-image: none;
+  padding-left: 17px;
+  background: url(../images/add.png) no-repeat 0 center;
+  font-size: 1.1em;
+}
+
+div.messages, div.status {
+  margin-top: 30px;
+}
+
+.submitted, .field-name-submitted-by {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  font-size: 0.83em;
+  color: #888;
+  margin-bottom: 10px;
+}
+.submitted ::before,
+.submitted ::after, .field-name-submitted-by ::before,
+.field-name-submitted-by ::after {
+  content: " ";
+  display: table;
+}
+.submitted ::after, .field-name-submitted-by ::after {
+  clear: both;
+}
+
+/*--------------------------------*/
+/*---------- Comments ------------*/
+/*--------------------------------*/
+#comments .comment {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  border: 1px solid #ddd;
+  background: #FCFBF7;
+  padding: 15px 25px 15px 17px;
+  margin-bottom: 20px;
+}
+#comments .comment ::before,
+#comments .comment ::after {
+  content: " ";
+  display: table;
+}
+#comments .comment ::after {
+  clear: both;
+}
+#comments .comment .user-picture-wrapper {
+  float: left;
+  width: 14%;
+  padding-top: 5px;
+}
+#comments .comment .user-picture-wrapper img {
+  border: 1px solid #d5d5d5;
+}
+#comments .comment .user-picture-wrapper .comment-author {
+  font-size: 0.83em;
+}
+#comments .comment .comment-content {
+  float: left;
+  width: 86%;
+}
+#comments .comment .comment-content h3.title {
+  margin: 0 0 2px;
+}
+#comments .comment .comment-content .content {
+  margin-bottom: 15px;
+}
+#comments .comment .comment-content .links ul.links {
+  float: left;
+  margin: 0;
+  font-size: 0.93em;
+}
+#comments .comment .comment-content .links ul.links li {
+  padding: 0 10px 0 0;
+}
+#comments .comment .comment-content .links .comment-date {
+  float: right;
+  font-size: 0.83em;
+  color: #888;
+  float: right;
+}
+#comments h2.comment-form {
+  margin-top: 25px;
+}
+
+ul.inline li a {
+  font-size: 0.93em;
+}
+ul.inline li.comment-add a {
+  background: url(../images/comment-icon.png) no-repeat 0 2px;
+  padding-left: 25px;
+  color: #0086C4;
+  display: inline-block;
+  line-height: 20px;
+}
+ul.inline li.first {
+  padding-left: 0;
+}
+
+.field-name-field-tags .field-item {
+  display: inline;
+  margin-right: 10px;
+}
+.field-name-field-tags .field-item a {
+  line-height: 1.3em;
+  padding: 0.1em 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+  color: #9E5870;
+  background: #f8f8f8;
+}
+
+/*--------------------------------*/
+/*------------- Blog ------------*/
+/*--------------------------------*/
+.page-laufblog h1, .page-termine h1 {
+  color: #777;
+}
+
+.node .field-name-field-tags {
+  margin-bottom: 15px;
+}
+.node .content {
+  clear: left;
+}
+
+.page-laufblog #content .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #aaa;
+}
+.page-laufblog #content .views-row.views-row-last {
+  border: none;
+}
+.page-laufblog .node .field-name-field-image {
+  clear: both;
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+.page-laufblog .node .field-name-field-tags {
+  float: right;
+  margin-bottom: 10px;
+  margin-top: -30px;
+  font-size: 0.93em;
+}
+.page-laufblog .node .field-name-body {
+  clear: right;
+}
+.page-laufblog .node .submitted {
+  float: left;
+}
+
+.node-type-article h1 {
+  margin-bottom: 5px;
+}
+.node-type-article .submitted, .node-type-article .field-name-submitted-by {
+  float: left;
+  margin-top: 5px;
+}
+.node-type-article .field-name-field-tags {
+  float: right;
+}
+.node-type-article .field-name-body {
+  clear: both;
+}
+.node-type-article .field-name-field-blog-bildergalerie {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  margin-bottom: -10px;
+}
+.node-type-article .field-name-field-blog-bildergalerie ::before,
+.node-type-article .field-name-field-blog-bildergalerie ::after {
+  content: " ";
+  display: table;
+}
+.node-type-article .field-name-field-blog-bildergalerie ::after {
+  clear: both;
+}
+.node-type-article .field-name-field-blog-bildergalerie .field-label {
+  font-size: 1.4em;
+  color: #0086C4;
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.node-type-article .field-name-field-blog-bildergalerie .field-item {
+  float: left;
+}
+.node-type-article .field-name-field-blog-bildergalerie .field-item img {
+  margin: 0 20px 15px 0;
+  border: 1px solid #ddd;
+}
+.node-type-article #comments {
+  clear: both;
+}
+
+/*** Views von Artikeln, gilt für Blog und Termine ***/
+.views-row .node h2 {
+  line-height: 1.3;
+}
+
+/*--------------------------------*/
+/*------- Termine Übersicht ------*/
+/*--------------------------------*/
+.page-termine #content .views-row {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #aaa;
+}
+.page-termine #content .views-row.views-row-last {
+  border: none;
+}
+.page-termine #content h2 {
+  margin-bottom: 5px;
+}
+.page-termine #content .views-field-field-bild-termin img {
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+.page-termine #content .views-field-field-datum {
+  float: left;
+  color: #E51B68;
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  font-size: 1.2em;
+}
+.page-termine #content .views-field-body {
+  clear: left;
+}
+
+/*--------------------------------*/
+/*----- Termin Detailansicht -----*/
+/*--------------------------------*/
+.node-type-termin .group_logo_termin {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  display: table-cell;
+  vertical-align: middle;
+}
+.node-type-termin .group_logo_termin ::before,
+.node-type-termin .group_logo_termin ::after {
+  content: " ";
+  display: table;
+}
+.node-type-termin .group_logo_termin ::after {
+  clear: both;
+}
+.node-type-termin .group_date_time {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  display: table-cell;
+  vertical-align: middle;
+  float: left;
+  padding: 7px 12px;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+.node-type-termin .group_date_time ::before,
+.node-type-termin .group_date_time ::after {
+  content: " ";
+  display: table;
+}
+.node-type-termin .group_date_time ::after {
+  clear: both;
+}
+.node-type-termin .field-name-field-datum {
+  font-size: 1.3em;
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  color: #E51B68;
+}
+.node-type-termin .field-name-field-uhrzeit {
+  font-size: 1.3em;
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  padding-left: 6px;
+}
+
+/*--------------------------------*/
+/*------- Wysiwyg Formate -------*/
+/*--------------------------------*/
+body.cke_show_borders {
+  background: white;
+}
+
+/*--------------------------------*/
+/*--------------------------------*/
+/*-------- Desktop-Layout --------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*---------------------*/
+/*--- Header Desktop --*/
+/*---------------------*/
+#name-and-slogan {
+  width: 545px;
+  height: 110px;
+  float: left;
+}
+#name-and-slogan #site-name {
+  padding: 10px 10px 15px 35px;
+  background: black;
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  font-size: 35px;
+  float: left;
+  margin: 0 0 0.1em 0;
+  text-transform: lowercase;
+  font-weight: normal;
+  line-height: 1.2;
+  width: 230px;
+  height: 85px;
+}
+#name-and-slogan #site-name a {
+  color: #222;
+  font-weight: normal;
+  color: white;
+}
+#name-and-slogan #site-name a:hover {
+  text-decoration: none;
+}
+#name-and-slogan #slogan-info-wrapper {
+  float: left;
+  padding-left: 20px;
+  padding-top: 10px;
+  background: #eee;
+  height: 99px;
+  width: 250px;
+  border-bottom: 1px solid #e8e8e8;
+  display: none;
+}
+#name-and-slogan #site-slogan {
+  font-family: "ArvoRegular", "trebuchet ms", arial, helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.3;
+  margin: 10px 0 4px;
+  float: none;
+  color: #555;
+  width: 230px;
+}
+#name-and-slogan #header-info {
+  color: #777;
+  font-size: 0.83em;
+  letter-spacing: 0.03em;
+}
+
+#header-image {
+  background: url(../images/header-image-subpages.jpg) no-repeat right top;
+  background: url("../images/laeufer-gross.jpg") no-repeat scroll left -20px transparent;
+  height: 110px;
+  width: 760px;
+  float: right;
+  position: absolute;
+  right: 0;
+  border-left: 2px solid white;
+}
+
+/*---------------------------*/
+/*------- Startseite --------*/
+/*---------------------------*/
+.front #name-and-slogan {
+  width: 20%;
+  height: 220px;
+}
+.front #name-and-slogan #site-name {
+  padding: 10px 10px 15px 35px;
+  font-size: 50px;
+  float: left;
+  margin: 0 0 0.1em 0;
+  text-transform: lowercase;
+  font-weight: normal;
+  line-height: 1.2;
+  width: 277px;
+  height: 120px;
+}
+.front #name-and-slogan #slogan-info-wrapper {
+  padding-top: 0;
+  display: block;
+  background: transparent;
+  padding-left: 0;
+  border: 0;
+}
+.front #name-and-slogan #site-slogan {
+  padding-left: 35px;
+  width: 250px;
+  clear: left;
+  font-size: 23px;
+  line-height: 1.2;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+.front #name-and-slogan #header-info {
+  clear: left;
+  padding-left: 35px;
+  width: 250px;
+  font-size: 13px;
+  color: #888;
+}
+
+.front #header {
+  height: 328px;
+  margin-right: -35px;
+}
+.front #header-image {
+  position: relative;
+  background: url(../images/header-laeufer.jpg) no-repeat right bottom;
+  background: url("../images/header-gruppe.jpg") no-repeat scroll 0 0 transparent;
+  height: 296px;
+  width: 705px;
+  float: right;
+  border-left: 0;
+}
+.front .header-bottom-left-inner {
+  width: 34px;
+}
+.front #main {
+  padding-top: 0;
+}
+.front .field-name-title, .front .field-name-body {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+}
+.front .field-name-title ::before,
+.front .field-name-title ::after, .front .field-name-body ::before,
+.front .field-name-body ::after {
+  content: " ";
+  display: table;
+}
+.front .field-name-title ::after, .front .field-name-body ::after {
+  clear: both;
+}
+.front h1 {
+  font-size: 1.9em;
+  text-transform: none;
+  line-height: 1.2;
+  margin: 0;
+  padding-top: 30px;
+  height: 30px;
+  margin-left: -35px;
+  padding-left: 35px;
+  background: #F5F5F5;
+}
+.front .front-left {
+  margin-left: -35px;
+  padding-left: 35px;
+  background: #F5F5F5;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+}
+.front .front-left p {
+  padding-right: 20px;
+}
+.front h1, .front .front-left {
+  margin-right: 0;
+  padding-right: 2px;
+}
+.front #page-bottom {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+  background: #f1f1f1;
+  border-top: 1px solid #e8e8e8;
+  margin-top: 0;
+  margin-left: -35px;
+  margin-right: -35px;
+  padding: 15px 35px 35px;
+  color: #777;
+}
+.front #page-bottom ::before,
+.front #page-bottom ::after {
+  content: " ";
+  display: table;
+}
+.front #page-bottom ::after {
+  clear: both;
+}
+.front #page-bottom #block-views-termine-block-1 h2 {
+  margin-left: 15px;
+}
+.front #page-bottom .block h2 {
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 1px;
+  background: url("../images/square-bullet-black.png") no-repeat 0 center;
+  padding-left: 20px;
+}
+.front #page-bottom .block h3 {
+  margin-top: 5px;
+  margin-bottom: 1px;
+  font-size: 1.1em;
+}
+.front #page-bottom .block .views-row {
+  margin-bottom: 8px;
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+}
+.front #page-bottom .block .views-row ::before,
+.front #page-bottom .block .views-row ::after {
+  content: " ";
+  display: table;
+}
+.front #page-bottom .block .views-row ::after {
+  clear: both;
+}
+.front #page-bottom .block .views-field-body {
+  line-height: 1.3;
+}
+.front #page-bottom .block .view-blog {
+  border-right: 1px solid #ccc;
+  padding-right: 15px;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+.front #page-bottom .block .views-field-field-image {
+  float: left;
+}
+.front #page-bottom .block img {
+  margin: 4px 15px 0 1px;
+  border: 1px solid #ddd;
+}
+.front #page-bottom .block .view-termine {
+  padding-left: 15px;
+}
+.front #page-bottom .block .view-termine .views-row {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
+}
+.front #page-bottom .block .view-termine .views-row ::before,
+.front #page-bottom .block .view-termine .views-row ::after {
+  content: " ";
+  display: table;
+}
+.front #page-bottom .block .view-termine .views-row ::after {
+  clear: both;
+}
+.front #page-bottom .block .view-termine .views-field-field-bild-termin {
+  float: left;
+}
+.front #page-bottom .block .view-termine .views-field-field-bild-termin img {
+  margin-right: 15px;
+  margin-left: 1px;
+  margin-top: 3px;
+}
+.front #page-bottom .block .view-termine .views-field-field-bild-termin img {
+  margin-top: 4px;
+}
+.front #page-bottom .block .view-termine .views-field-field-datum {
+  color: black;
+  padding-right: 10px;
+}
+.front #page-bottom .block .view-termine .views-field-body {
+  display: inline;
+}
+.front #page-bottom .block .view-termine .views-field-body p {
+  margin: 0;
+  display: inline;
+}
+.front .front-right {
+  margin-right: -35px;
+  padding-right: 35px;
+  background: #E2E2E2;
+  margin-top: -60px;
+  padding-left: 3px;
+}
+.front .front-right h2 {
+  margin-top: 0;
+  padding-top: 30px;
+}
+.front .front-right h2, .front .front-right p {
+  padding-left: 25px;
+}
+.front .front-middle {
+  clear: left;
+  padding-top: 22px;
+}
+.front .front-middle h3.strecke {
+  background: url("../images/square-bullet-magenta.png") no-repeat scroll 0 5px transparent;
+  color: #E51B68;
+  line-height: 1.2;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  font-size: 17px;
+}
+.front .front-middle div.media-element.file-mittel {
+  height: auto !important;
+  width: auto !important;
+}
+.front .front-middle div.media-element.file-mittel a {
+  display: block;
+}
+.front .front-middle img {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.front .front-middle p.description-top {
+  margin: 5px 0 10px;
+  padding-left: 20px;
+  color: #999;
+  font-size: 0.93em;
+}
+.front .front-middle p.description-bottom {
+  margin: 2px 0 10px;
+  padding-left: 2px;
+  color: #999;
+  font-size: 0.93em;
+}
+.front .middle-left, .front .middle-middle, .front .middle-right {
+  float: left;
+  width: 29%;
+}
+.front .middle-left {
+  padding-right: 2.6%;
+}
+.front .middle-middle {
+  padding: 0px 2.6%;
+}
+.front .middle-right {
+  padding-left: 2.6%;
+}
+
+#header {
+  position: relative;
+  margin: 0 -35px;
+}
+#header ul#main-menu {
+  float: left;
+  margin: 0;
+  width: 620px;
+}
+#header ul#main-menu li {
+  float: left;
+  padding: 0;
+}
+#header ul#main-menu li.first a {
+  padding-left: 10px;
+}
+#header ul#main-menu li a {
+  color: #EDF6F9;
+  text-transform: uppercase;
+  line-height: 29px;
+  font-size: 1.3em;
+  display: inline-block;
+  padding: 3px 14px 0;
+}
+#header ul#main-menu li.active a, #header ul#main-menu li.active-trail a {
+  background: #E51B68;
+  color: white;
+}
+
+#header-bottom {
+  height: 32px;
+  background: black;
+  border-top: 2px solid white;
+  clear: both;
+}
+
+#header-bottom-left {
+  height: 100%;
+  width: 670px;
+  background: #009BDD;
+  float: left;
+}
+
+.header-bottom-left-inner {
+  float: left;
+  height: 100%;
+  width: 27px;
+  background: #009BDD;
+}
+
+.sidebar-second #page #content .section {
+  padding-right: 50px;
+}
+.sidebar-second #page #sidebar-second .section {
+  border-left: 1px dashed #ccc;
+  margin-left: -20px;
+  padding-left: 25px;
+  margin-top: -30px;
+  padding-top: 30px;
+  margin-right: -35px;
+  padding-right: 35px;
+  padding-bottom: 20px;
+  background: #f5f5f5;
+  color: #818181;
+}
+.sidebar-second #page #sidebar-second .section .views-row {
+  margin-bottom: 10px;
+}
+.sidebar-second #page #sidebar-second .section h2 {
+  color: black;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-size: 1.7em;
+}
+.sidebar-second #page #sidebar-second .section .views-field-title h3 {
+  margin-bottom: 3px;
+  font-size: 1.2em;
+  text-transform: none;
+  line-height: 1.3;
+}
+.sidebar-second #page #sidebar-second .section .views-field-title h3 a {
+  color: #E51B68;
+}
+.sidebar-second #page #sidebar-second .section .view-blog .views-field-title h3 {
+  font-size: 1.2em;
+}
+.sidebar-second #page #sidebar-second .section .views-field-field-datum {
+  color: #333;
+  margin-bottom: 2px;
+  font-size: 0.93em;
+}
+.sidebar-second #page #sidebar-second .section .views-field-body {
+  margin-bottom: 2px;
+}
+.sidebar-second #page #sidebar-second .section p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.sidebar-second #page #sidebar-second .section .views-field-view-node {
+  font-size: 0.83em;
+  white-space: nowrap;
+}
+
+.node-type-termin .field-name-field-bild-termin {
+  float: left;
+  margin-right: 20px;
+}
+.node-type-termin .field-name-field-datum {
+  float: left;
+}
+.node-type-termin .field-name-field-uhrzeit {
+  float: left;
+}
+.node-type-termin .field-name-body {
+  clear: left;
+}
+.node-type-termin .field-name-field-link-veranst-website {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

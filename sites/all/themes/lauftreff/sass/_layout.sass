@@ -35,10 +35,10 @@ body
   padding: 20px 0 30px
 
 #page
-  +container
+  //+container
   width: 960px
   background: white
-  +box-shadow(0px 2px 6px #999)
+  box-shadow: 0px 2px 6px #999
   zoom: 1
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=90, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=180, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=225, Strength=3) progid:DXImageTransform.Microsoft.Shadow(color='#bbbbbb', Direction=260, Strength=5) progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=305, Strength=3)
 
@@ -63,7 +63,7 @@ a#logo
   padding-top: 30px
 
 #content
-  +legacy-pie-clearfix
+  +clearfix
   a.feed-icon
     display: none
   .region-content
@@ -79,9 +79,9 @@ a#logo
   p
     margin: 0
   #footer-left
-    +span-columns(4,12)
+    //+span-columns(4,12)
   #footer-right
-    +span-columns(4 omega,12)
+    //+span-columns(4 omega,12)
     text-align: right
 
 /*--------------------------------*/
@@ -92,7 +92,7 @@ body
   color: $body-base-font-color
 
 h1,h2,h3,h4,h5,h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
   font-family: $font-family-headlines
   color: $headline-color
   font-weight: normal
@@ -158,7 +158,7 @@ div.messages, div.status
   margin-top: 30px
 
 .submitted, .field-name-submitted-by
-  +legacy-pie-clearfix
+  +clearfix
   font-size: $font-size-minus-two
   color: $submitted-color
   margin-bottom: 10px
@@ -228,7 +228,7 @@ ul.inline
       line-height: 1.3em
       padding: 0.1em 8px 0
       border: 1px solid #ddd
-      +border-radius(5px)
+      border-radius: 5px
       display: inline-block
       color: #9E5870
       background: #f8f8f8
@@ -284,7 +284,7 @@ ul.inline
   .field-name-body
     clear: both
   .field-name-field-blog-bildergalerie
-    +legacy-pie-clearfix
+    +clearfix
     margin-bottom: -10px
     .field-label
       font-size: $font-size-h3
@@ -338,11 +338,11 @@ ul.inline
 
 .node-type-termin
   .group_logo_termin
-    +legacy-pie-clearfix
+    +clearfix
     display: table-cell
     vertical-align: middle
   .group_date_time
-    +legacy-pie-clearfix
+    +clearfix
     display: table-cell
     vertical-align: middle
     float: left
@@ -488,9 +488,9 @@ $front-left-background: #F5F5F5
   #main
     padding-top: 0
   .field-name-title, .field-name-body
-    +legacy-pie-clearfix
+    +clearfix
   h1
-    +span-columns(8,12)
+    //+span-columns(8,12)
     font-size: $font-size-h2
     text-transform: none
     line-height: 1.2
@@ -501,7 +501,7 @@ $front-left-background: #F5F5F5
     padding-left: $page-padding
     background: $front-left-background
   .front-left
-    +span-columns(8,12)
+    //+span-columns(8,12)
     margin-left: -($page-padding)
     padding-left: $page-padding
     background: $front-left-background
@@ -514,7 +514,7 @@ $front-left-background: #F5F5F5
     margin-right: 0
     padding-right: 2px
   #page-bottom
-    +legacy-pie-clearfix
+    +clearfix
     background: #f1f1f1
     border-top: 1px solid #e8e8e8
     margin-top: 0
@@ -523,9 +523,9 @@ $front-left-background: #F5F5F5
     padding: 15px $page-padding 35px
     color: #777
     #block-views-blog-block-1
-      +span-columns(6, 12)
+      //+span-columns(6, 12)
     #block-views-termine-block-1
-      +span-columns(omega 6, 12)
+      //+span-columns(omega 6, 12)
       h2
         margin-left: 15px
     .block
@@ -543,7 +543,7 @@ $front-left-background: #F5F5F5
         font-size: 1.1em
       .views-row
         margin-bottom: 8px
-        +legacy-pie-clearfix
+        +clearfix
       .views-field-body
         line-height: 1.3
       .view-blog
@@ -559,7 +559,7 @@ $front-left-background: #F5F5F5
       .view-termine
         padding-left: 15px
         .views-row
-          +legacy-pie-clearfix
+          +clearfix
         .views-field-field-bild-termin
           float: left
           img
@@ -579,7 +579,6 @@ $front-left-background: #F5F5F5
             display: inline
 
   .front-right
-    +span-columns(omega 4,12)
     margin-right: -($page-padding)
     padding-right: $page-padding
     background: #E2E2E2
@@ -625,7 +624,7 @@ $front-left-background: #F5F5F5
     width: 29%
   .middle-left
     padding-right: 2.6%
-  .middle-middle,
+  .middle-middle
     padding: 0px 2.6%
   .middle-right
     padding-left: 2.6%
@@ -675,11 +674,11 @@ $front-left-background: #F5F5F5
 
 .sidebar-second #page
   #content
-    +span-columns(9,12)
+    //+span-columns(9,12)
     .section
       padding-right: 50px
   #sidebar-second
-    +span-columns(3 omega,12)
+    //+span-columns(3 omega,12)
     .section
       border-left: 1px dashed #ccc
       margin-left: -20px
