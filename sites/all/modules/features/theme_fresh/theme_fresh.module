@@ -2,5 +2,7 @@
 
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Theme Fresh feature.
  */
+
+include_once 'theme_fresh.features.inc';
