@@ -1,0 +1,19 @@
+name = Lauftreff Frisch
+description = Lauftreff Theme
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/style.css
+
+scripts[] = js/lauftreff.js
+
+regions[header] = Header
+regions[header_info] = Header Info
+regions[help] = Help
+regions[highlighted] = Highlighted
+regions[pagetop] = Page Top
+regions[content] = Content
+regions[pagebottom] = Page Bottom
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer

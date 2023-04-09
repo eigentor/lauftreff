@@ -1,0 +1,15 @@
+// Breakpoints
+$breakpoint-tablet-portrait: 480px
+$breakpoint-tablet: 768px
+$breakpoint-desktop-narrow: 1024px
+$breakpoint-desktop: 1280px
+$breakpoint-desktop-wide: 1440px
+    
+    
+    
+@mixin container()
+    +breakpoint($breakpoint-desktop-narrow)
+        margin: auto
+        width: 960px
+    +breakpoint($breakpoint-desktop)
+        width: 1200px
