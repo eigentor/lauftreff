@@ -7,12 +7,6 @@ div,
 span, 
 object, 
 iframe, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
 p, 
 blockquote, 
 pre, 
@@ -69,7 +63,16 @@ summary,
 time, 
 mark, 
 audio, 
-video{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }     
+video{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }  
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6  { 
+    vertical-align:baseline; background:transparent;
+    margin:0; padding:0; border:0; outline:0;
+}   
 
 article,
 aside,

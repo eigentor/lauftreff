@@ -3,7 +3,7 @@ description = Lauftreff Theme
 version = VERSION
 core = 7.x
 
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/lauftreff-styles.css
 
 scripts[] = js/lauftreff.js
 

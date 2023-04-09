@@ -1,0 +1,21 @@
+@import ../fonts/montserrat/montserrat.css
+@import ../fonts/news-cycle/news-cycle.css
+
+$main-font-family: Montserrat, sans-serif
+$headline-font: 'News Cycle', sans-serif
+
+@mixin body-font()
+    font-family: $main-font-family
+    font-weight: 500
+
+
+html 
+    +body-font
+
+h1, h2, h3 
+    font-family: $headline-font
+    font-weight: 700
+
+h3, h4, h5, h6 
+    font-family: $headline-font
+    font-weight: 400

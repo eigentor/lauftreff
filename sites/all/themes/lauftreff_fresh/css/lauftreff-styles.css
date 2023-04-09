@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import "../fonts/montserrat/montserrat.css";
+@import "../fonts/news-cycle/news-cycle.css";
 html {
   box-sizing: border-box;
 }
@@ -9,12 +11,6 @@ div,
 span,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 pre,
@@ -79,6 +75,20 @@ video {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 article,
@@ -274,6 +284,21 @@ table {
 
 td {
   vertical-align: top;
+}
+
+html {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 700;
+}
+
+h3, h4, h5, h6 {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 400;
 }
 
 /*------------------------------------------- */
