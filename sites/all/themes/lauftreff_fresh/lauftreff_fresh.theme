@@ -1,0 +1,5 @@
+<?php
+
+function lauftreff_fresh_preprocess_page(&$variables)  {
+    $dolly = 'Schaf';
+}
