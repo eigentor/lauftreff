@@ -14,6 +14,7 @@ function header_slideshow_field_default_field_instances() {
   // Exported field_instance: 'node-header_slideshow-field_bilder'.
   $field_instances['node-header_slideshow-field_bilder'] = array(
     'bundle' => 'header_slideshow',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -36,15 +37,23 @@ function header_slideshow_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_bilder',
     'label' => 'Bilder',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'allowed_bundles' => array(),
-      'bundle_weights' => array(),
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'header_slideshow_image' => 'header_slideshow_image',
+      ),
+      'bundle_weights' => array(
+        'header_slideshow_image' => 2,
+      ),
+      'default_edit_mode' => 'open',
+      'default_edit_mode_override' => 1,
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
@@ -181,6 +190,53 @@ function header_slideshow_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-header_slideshow_image-field_order'.
+  $field_instances['paragraphs_item-header_slideshow_image-field_order'] = array(
+    'bundle' => 'header_slideshow_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_order',
+    'label' => 'Reihenfolge',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-header_slideshow_image-field_text'.
   $field_instances['paragraphs_item-header_slideshow_image-field_text'] = array(
     'bundle' => 'header_slideshow_image',
@@ -248,6 +304,7 @@ function header_slideshow_field_default_field_instances() {
   t('Bild');
   t('Bilder');
   t('Link');
+  t('Reihenfolge');
   t('Text');
 
   return $field_instances;
